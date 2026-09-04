@@ -1,0 +1,1019 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --rosa: #E34BAA;
+    --rosa-claro: #E58ACF;
+    --lilas: #C98BD7;
+    --roxo: #8B4CC7;
+    --roxo-escuro: #4b1d8b;
+
+    --branco: #ffffff;
+    --cinza: #6b7280;
+    --preto: #2B1833;
+}
+
+a, button, #img {
+    transition: all 0.3s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 50px;
+    background: #e9adebb2;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(46, 114, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#nametitle h2{
+    color: var(--roxo);
+}
+
+
+#top1{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+#nav1 {
+    display: flex;
+    gap: 18px;
+}
+
+#nav1 a {
+    color: #ac1973;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+}
+
+#nav1 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background: var(--rosa);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#nav1 a:hover::after {
+    width: 100%;
+}
+
+#nav1 a:hover {
+    color: var(--roxo-escuro);
+}
+
+#container{
+    min-height: 100vh;
+    background-attachment: fixed;
+    background: #f14cc81e;
+}
+#partprin {
+    min-height: 100vh;
+    position: relative;
+    background-image: url("img/fundo-nexa.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px 80px;
+    background-image: url(img/ChatGPT\ Image\ 3\ de\ set.\ de\ 2026\,\ 18_47_42.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.conteudo-topo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#parta {
+    letter-spacing: 2px;
+
+    padding: 30px 50px;
+
+    margin: 20px 0 40px;
+
+    border-radius: 25px;
+
+    width: 800px;
+    max-width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: rgba(247, 189, 242, 0.486);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    backdrop-filter: blur(8px);
+}
+
+.cards-home {
+    display: grid;
+
+    grid-template-columns: repeat(3, 260px);
+    grid-template-rows: repeat(2, 220px);
+
+    gap: 25px;
+
+    justify-content: center;
+}
+
+.card-home {
+    width: 260px;
+    height: 220px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: rgba(255, 235, 250, 0.568);
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 10px 30px rgba(112, 64, 181, 0.15);
+
+    box-sizing: border-box;
+
+    transition: 0.3s;
+}
+
+.card-home h2 {
+    color: #7040B5;
+    font-size: 20px;
+}
+
+.card-home p {
+    color: #4b3552;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-home a {
+    align-self: flex-start;
+
+    padding: 9px 20px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #E34BAA, #8B4CC7);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.card-home:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(112, 64, 181, 0.25);
+}
+
+.card-home a:hover {
+    transform: scale(1.05);
+}
+
+.ativo{
+    color: var(--verde) !important;
+}
+
+
+.ativo::after{
+    width: 100% !important;
+}
+
+#titleprin{
+    color: var(--azul);
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+
+#titleprin-city{
+     color: var(--verde);
+}
+
+#txt1{
+    color: var(--preto);
+    backdrop-filter: blur(2px);
+    max-width: 600px;
+    margin-top: 30px;
+    line-height: 1.6;
+    font-size: 17px;
+    opacity: 0.85;
+}
+
+#graficoContainer{
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    height: 300px;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow-y: auto;
+    padding: 14px 12px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* 🔥 altura ideal pro gráfico */
+#graficoVotos{
+    width: 100% !important;
+    height: 260px !important;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* 📱 CELULAR */
+@media (max-width: 600px){
+
+    #graficoContainer{
+        margin: 15px 10px;
+        padding: 12px 10px;
+        border-radius: 16px;
+    }
+
+    #graficoVotos{
+        height: 240px !important;
+    }
+}
+
+#boto{
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+}
+
+#boto1{
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--azul), var(--verde));
+    padding: 18px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+}
+
+#boto1, #boto2{
+    display: inline-block;
+    text-align: center;
+    min-width: 180px;
+}
+
+#boto1:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(22,163,74,0.4);
+}
+
+#boto2{
+    color: var(--amarelo);
+    text-decoration: none;
+    border: 2px solid var(--amarelo);
+    padding: 18px 28px;
+    border-radius: 30px;
+}
+
+#boto2:hover{
+    background: var(--amarelo);
+    transform: scale(1.05);
+    transform: translateY(-3px);
+    color: #111;
+}
+
+#boto1:active,
+#boto2:active{
+    transform: scale(0.96);
+}
+
+#linha{
+    border: solid 1px rgba(255, 255, 255, 0.05);
+}
+
+#apresentando{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 28px 100px 0 120px ;
+    max-width: 1400px;
+    margin: auto;
+    padding: 60px 40px;
+    align-items: flex-start;
+    
+}
+
+#sobre h3{
+    font-size: 1.6em;
+    color: #22c55e;
+}
+
+#im{
+    margin-right: 10px;
+    color: #22c55e;
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+
+#txt2{
+    color: var(--preto);
+    font-size: 0.95em;
+    width: 400px;
+    line-height: 1.6;
+}
+
+#tipos{
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+#tipos div{
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+#tipos div:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+#tipos div h4{
+    color: var(--azul);
+     font-size: 16px;
+}
+
+#tipos div p{
+    width: 100%;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.4;
+    word-break: break-word; /* 👈 evita estourar */
+}
+
+
+#img {
+    max-width: 800px;
+    border-radius: 12px;
+    border: solid 1px rgba(34,197,94,0.3);
+}
+
+#img:hover {
+    transform: scale(1.02);
+}
+
+#simbolo{ 
+    width: 60px; 
+    background: transparent;
+    border-radius: 8px;
+        filter: saturate(0.9) contrast(1.05) brightness(0.98) drop-shadow(0 6px 15px rgba(0,0,0,0.12));
+    transition: 0.3s;
+    
+}
+
+#simbolo:hover {
+    transform: scale(1.05);
+}
+
+
+.imggg{
+    width: 180px;
+    height: 180px; /* 🔥 altura fixa */
+    object-fit: cover; /* 🔥 mantém proporção sem distorcer */
+    border-radius: 12px;
+    flex-shrink: 0;
+    scroll-snap-align: center; /* 🔥 encaixe bonito no scroll */
+}
+
+.imggg:hover{
+    transform: scale(1.08) translateY(-5px);
+
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.25),
+        0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.galeria{
+    display: flex;
+    gap: 12px;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    padding: 10px 15px;
+    margin: 20px auto;
+
+    max-width: 900px;
+}
+
+.leaflet-popup-content .popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 220px;
+}
+
+
+
+/* LABEL */
+.leaflet-popup-content .popup-form label {
+  font-size: 12px;
+  color: #374151;
+}
+
+/* INPUTS */
+.leaflet-popup-content .popup-form select,
+.leaflet-popup-content .popup-form textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  background: #fff;
+  color: #000;
+}
+
+/* TEXTAREA */
+.leaflet-popup-content .popup-form textarea {
+  resize: none;
+  height: 70px;
+}
+
+
+
+/* BOTÃO */
+.leaflet-popup-content .popup-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #16a34a;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* HOVER */
+.leaflet-popup-content .popup-form button:hover {
+  background: #15803d;
+}
+
+#tipos > div:not(.galeria){
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#rodape {
+    background: linear-gradient(135deg, #7040B5, #8B4CC7);
+    color: white;
+
+    padding: 35px 20px 15px;
+
+    text-align: center;
+}
+
+.rodape-logo h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.rodape-logo p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.rodape-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin: 30px 0;
+}
+
+.rodape-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.rodape-links a:hover {
+    color: #E58ACF;
+}
+
+.rodape-copy {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px){
+
+    #partprin{
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 70px 25px;
+
+        background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.87),
+            rgba(255, 255, 255, 0.815)
+        ),
+        url('img/PRESIDENTE DUTRA.png');
+
+        background-position: top;
+        background-size: cover;
+    }
+    
+
+    #parta{
+        padding: 0;
+        width: 100%;
+        transform: translateY(0);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.103);
+    }
+
+    #txt1{
+        max-width: 100%;
+    }
+
+    #apresentando{
+        flex-direction: column;
+        gap: 40px;
+        padding: 50px 25px;
+        align-items: center;
+        text-align: center;
+    }
+
+    #txt2{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* 🔥 AQUI JÁ MELHORA PRO TABLET */
+    #tipos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        justify-items: center;
+        gap: 20px;
+    }
+
+    #tipos div{
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+
+    #top{
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    #top1{
+        justify-content: center;
+    }
+
+    #nav1{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #nav1 a{
+        font-size: 14px;
+    }
+
+#partprin
+{ grid-template-columns: 1fr; 
+    text-align: center; 
+    padding: 70px 25px; 
+    background: linear-gradient( rgba(255,255,255,0.88), rgba(255,255,255,0.88) ), url('img/PRESIDENTE DUTRA.png'); 
+    background-position: center; 
+    background-size: cover; }
+
+    #titleprin{
+        font-size: 46px;
+        line-height: 1.2;
+        backdrop-filter: blur(2px);
+        background-color:rgba(255,255,255,0.95) 80%;
+    }
+
+    #titleprin h1{
+        font-size: 60px;
+        backdrop-filter: blur(2px);
+    }
+        #parta{
+        padding: 0;
+        width: 100%;
+        transform: translateY(0);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.103);
+    }
+
+/* 📱 TABLET E CELULAR */
+@media screen and (max-width: 1024px){
+
+    #top{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    #top1{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #nav1{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #nav1 a{
+        font-size: 14px;
+    }
+
+    #simbolo{
+        width: 50px;
+    }
+}
+
+    #titleprin-city{
+        display: block;
+    }
+
+    #txt1{
+        font-size: 15px;
+        line-height: 1.7;
+        margin-top: 20px;
+    }
+
+    #boto{
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-top: 35px;
+    }
+
+    #boto1,
+    #boto2{
+        width: 100%;
+        max-width: 320px;
+        padding: 16px;
+    }
+
+    #apresentando{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        padding: 40px 20px;
+    }
+
+    #sobre{
+        width: 100%;
+    }
+
+    #txt2{
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    /* 🚨 CORREÇÃO FINAL DO BUG */
+    #tipos{
+        display: grid;
+        grid-template-columns: 1fr; /* 👈 1 coluna no celular */
+        justify-items: center;
+        gap: 15px;
+    }
+
+    #tipos div{
+        width: 100%;
+        max-width: 320px;
+    }
+
+}
+
+
+@media screen and (max-width: 380px){
+
+    #titleprin h1{
+        font-size: 58px;
+        backdrop-filter: blur(2px);
+    }
+    #parta{
+        padding: 0;
+        width: 100%;
+        transform: translateY(0);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.103);
+    }
+
+    #txt1{
+        font-size: 14px;
+    }
+
+    #boto1,
+    #boto2{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 380px){
+
+    #top{
+        padding: 12px 10px;
+    }
+
+    #nav1{
+        gap: 8px;
+    }
+
+    #nav1 a{
+        font-size: 12px;
+    }
+        #parta{
+        padding: 0;
+        width: 100%;
+        transform: translateY(0);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.103);
+    }
+
+    #simbolo{
+        width: 42px;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    #top{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 14px 15px;
+
+        text-align: center;
+    }
+
+    #parta{
+        padding: 0;
+        width: 100%;
+        transform: translateY(0);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.103);
+    }
+
+    #top1{
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    #nav1{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    #nav1 a{
+        font-size: 14px;
+    }
+
+    #simbolo{
+        width: 48px;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    #top{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 14px 15px;
+
+        text-align: center;
+    }
+
+    #top1{
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    #nav1{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    #nav1 a{
+        font-size: 14px;
+    }
+
+    #simbolo{
+        width: 48px;
+    }
+
+}
+
+
+/* 📱 CELULAR PEQUENO */
+@media (max-width: 400px){
+
+    .imggg{
+        width: 120px;
+        height: 80px;
+    }
+
+
+}
+
+
+@media (max-width: 600px){
+
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        overflow-x: hidden;
+    }
+
+    .imggg{
+        width: 100%;
+        height: 120px; /* 🔥 deixa a imagem natural */
+        object-fit: cover; /* 🔥 garante que não corta */
+    }
+
+}
+
+@media (max-width: 768px) {
+    #parta {
+        padding: 18px;
+        margin-top: 40px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #parta {
+        padding: 15px;
+        margin-top: 30px;
+        border-radius: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    #partprin {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    #parta {
+        margin: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .cards-home {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 10px;
+    }
+
+}
+@media (max-width: 900px) {
+
+    .cards-home {
+        grid-template-columns: repeat(2, 260px);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .cards-home {
+        grid-template-columns: 260px;
+    }
+
+}
+@media (max-width: 600px) {
+
+    #partprin {
+        min-height: 100vh;
+
+        background-image: url("img/ChatGPT Image 3 de set. de 2026, 18_47_42.png");
+
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #partprin {
+        background-image: url("img/fundo-nexa.png");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+}
+/* TÍTULO PRINCIPAL */
+#titleprin h1 {
+    font-family: 'Bodoni Moda', serif !important;
+    font-weight: 700;
+    font-style: oblique;
+    letter-spacing: 8px;
+    font-size: 80px;
+    color: #800448d2;
+}
+
+/* SUBTÍTULOS */
+h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
+}
+
+/* TEXTOS */
+p, a, li, button, input, textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+}
