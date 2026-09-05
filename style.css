@@ -26,62 +26,139 @@ html{
     scroll-behavior: smooth;
 }
 
-#top{
+#top {
+    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 50px;
-    background: #e9adebb2;
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(46, 114, 0, 0.05);
+
+    padding: 9px 50px;
+
+    background: rgba(242, 213, 243, 0.90);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(117, 55, 155, 0.08);
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
 }
 
-#nametitle h2{
-    color: var(--roxo);
-    font-family:Arial, Helvetica, sans-serif
-}
 
+/* LOGO */
 
-#top1{
+#top1 {
     display: flex;
-    gap: 12px;
     align-items: center;
+
+    gap: 12px;
 }
+
+
+#simbolo {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    border-radius: 9px;
+
+    transition: .3s ease;
+
+    filter:
+        drop-shadow(
+            0 5px 12px rgba(91, 43, 145, .16)
+        );
+}
+
+
+#simbolo:hover {
+    transform: scale(1.05);
+}
+
+
+#nametitle h2 {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #6326a4;
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
 
 #nav1 {
     display: flex;
-    gap: 18px;
+    align-items: center;
+
+    gap: 28px;
 }
 
+
 #nav1 a {
-    color: #ac1973;
-    text-decoration: none;
     position: relative;
-    font-weight: 500;
+
+    padding: 8px 0;
+
+    color: #6a287f;
+
+    text-decoration: none;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: .3s ease;
 }
+
 
 #nav1 a::after {
     content: "";
+
     position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
     height: 3px;
-    background: var(--rosa);
+
+    transform: translateX(-50%);
+
     border-radius: 10px;
-    transition: 0.3s;
+
+    background: linear-gradient(
+        90deg,
+        #e45db5,
+        #7940bd
+    );
+
+    transition: .3s ease;
 }
+
+
+#nav1 a:hover {
+    color: #48177e;
+}
+
 
 #nav1 a:hover::after {
     width: 100%;
 }
 
-#nav1 a:hover {
-    color: var(--roxo-escuro);
-}
 
 #container{
     min-height: 100vh;

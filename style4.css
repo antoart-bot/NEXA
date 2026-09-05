@@ -1,620 +1,1422 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
 
-*{
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-
-:root{
-    --verde: #16a34a;
-    --amarelo: #facc15;
-    --azul: #1d4ed8;
-
-    --branco: #ffffff;
-    --cinza: #6b7280;
-    --preto: #111827;
-}
-
-a, button, #img {
-    transition: all 0.3s ease;
-}
-
-html{
+html {
     scroll-behavior: smooth;
 }
 
-#top{
+body {
+    font-family: 'Inter', sans-serif;
+    color: #24183d;
+    background: #f3e6f8;
+}
+
+
+/* =====================================================
+   HEADER + NAV
+===================================================== */
+
+#top {
+    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 60px;
-    background: #e4e1e1d9;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+
+    padding: 8px 50px;
+
+    background: rgba(239, 215, 243, 0.95);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(91, 42, 137, 0.10);
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
 }
 
-#nametitle h2{
-    color: var(--azul);
-}
 
+/* LOGO */
 
-#top1{
+#top1 {
     display: flex;
-    gap: 14px;
     align-items: center;
+
+    gap: 12px;
 }
 
-#nav1 {
-    display: flex;
-    gap: 20px;
-}
 
-#nav1 a {
-    color: #111;
-    text-decoration: none;
-    position: relative;
-    font-weight: 500;
-}
+#simbolo {
+    width: 58px;
+    height: 58px;
 
-#nav1 a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 3px;
-    background: var(--azul);
-    border-radius: 10px;
-    transition: 0.3s;
-}
+    object-fit: contain;
 
-#nav1 a:hover::after {
-    width: 100%;
-}
-
-#nav1 a:hover {
-    color: var(--azul);
-}
-
-#simbolo{ 
-    width: 60px; 
-    background: transparent;
     border-radius: 8px;
-        filter: saturate(0.9) contrast(1.05) brightness(0.98) drop-shadow(0 6px 15px rgba(0,0,0,0.12));
-    transition: 0.3s;
-    
+
+    transition: 0.3s ease;
+
+    filter: drop-shadow(
+        0 5px 12px rgba(80, 35, 130, 0.15)
+    );
 }
+
 
 #simbolo:hover {
     transform: scale(1.05);
 }
 
-/* ============================= */
-/* ☀️ CONTATO FINAL CLARO */
-/* ============================= */
 
-#contato-final{
-    padding: 100px 20px;
+#nametitle h2 {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #6326a4;
+}
+
+
+/* =====================================================
+   NAV
+===================================================== */
+
+#nav1 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+#nav1 a {
+    position: relative;
+
+    padding: 8px 0;
+
+    color: #672778;
+
+    text-decoration: none;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+#nav1 a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+
     background: linear-gradient(
-        180deg,
-        #f8fafc,
-        #eef5ff
+        90deg,
+        #e45cae,
+        #7840bd
     );
 
-    color: #111827;
+    transition: 0.3s ease;
 }
 
-.final-container{
-    max-width: 1100px;
+
+#nav1 a:hover {
+    color: #46177b;
+}
+
+
+#nav1 a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   PÁGINA ANTICONCEPCIONAIS
+===================================================== */
+
+.pagina-anticoncepcionais {
+    min-height: 100vh;
+
+    padding: 35px 4% 35px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(238, 165, 216, .35),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 5% 80%,
+            rgba(191, 147, 223, .30),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f7ebfa,
+            #eadcf6 50%,
+            #f8e9f7
+        );
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-anticoncepcionais {
+    position: relative;
+
+    width: min(1350px, 100%);
+
+    min-height: 300px;
+
     margin: auto;
+
+    display: flex;
+
+    align-items: center;
 }
 
-/* TITULO */
 
-.titulo-final{
-    text-align: center;
-    margin-bottom: 60px;
+.hero-ant-texto {
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 850px;
 }
 
-.titulo-final span{
-    background: rgba(37,99,235,0.08);
-    color: var(--azul);
 
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-size: 13px;
-    letter-spacing: 1px;
+/* =====================================================
+   LOGO DO HERO
+===================================================== */
+
+.marca-ant {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+.logo-n-ant {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: linear-gradient(
+        135deg,
+        #54219b,
+        #8f4dc7
+    );
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 29px;
+
+    font-weight: 800;
+}
+
+
+.marca-ant strong {
+    display: block;
+
+    color: #52209a;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    letter-spacing: 3px;
+}
+
+
+.marca-ant small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #52209a;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.hero-ant-texto h1 {
+    margin: 0;
+
+    color: #3d147d;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(55px, 6vw, 82px);
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+}
+
+
+.hero-ant-texto h2 {
+    margin-top: 12px;
+
+    color: #471780;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(20px, 2vw, 28px);
+
     font-weight: 600;
 }
 
-.titulo-final h2{
-    font-size: 42px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 
-    color: var(--azul);
+.linha-rosa {
+    width: 100px;
+
+    height: 3px;
+
+    margin: 15px 0;
+
+    border-radius: 10px;
+
+    background: #ed83bc;
 }
 
-.titulo-final p{
-    max-width: 650px;
-    margin: auto;
-    color: var(--cinza);
-    line-height: 1.7;
+
+.hero-ant-texto > p {
+    max-width: 600px;
+
+    color: #30273d;
+
+    font-size: 17px;
+
+    line-height: 1.6;
 }
 
-/* CONTATOS */
 
-.contato-box{
+/* =====================================================
+   DECORAÇÕES
+===================================================== */
+
+.decoracao-ant {
+    position: absolute;
+
+    right: -30px;
+    top: 0;
+
+    width: 530px;
+    height: 320px;
+
+    pointer-events: none;
+
+    opacity: .55;
+}
+
+
+.simbolo-feminino {
+    position: absolute;
+
+    right: 220px;
+    top: 15px;
+
+    color: #e47fb9;
+
+    font-size: 100px;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.simbolo-feminino.pequeno {
+    right: 160px;
+    top: 190px;
+
+    font-size: 70px;
+}
+
+
+.simbolo-mais {
+    position: absolute;
+
+    right: 80px;
+    top: 45px;
+
+    color: #e88bc3;
+
+    font-size: 75px;
+
+    font-weight: 700;
+}
+
+
+.utero {
+    position: absolute;
+
+    right: -15px;
+    top: 115px;
+
+    color: #d78bc5;
+
+    font-size: 150px;
+
+    opacity: .5;
+}
+
+
+/* =====================================================
+   CAIXA DOS CARDS
+===================================================== */
+
+.box-ant {
+    position: relative;
+
+    z-index: 10;
+
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+
+    padding: 18px 25px 25px;
+
+    background: rgba(255, 255, 255, .94);
+
+    border-radius: 23px;
+
+    border: 1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 12px 35px rgba(91,45,135,.13);
+}
+
+
+/* =====================================================
+   TÍTULO DOS CARDS
+===================================================== */
+
+.titulo-box-ant {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
 
-    margin-bottom: 60px;
-}
-
-.card-contato{
-    width: 300px;
-
-    background: white;
-
-    border: 1px solid rgba(0,0,0,0.06);
-
-    border-radius: 22px;
-
-    padding: 25px;
-
-    display: flex;
     align-items: center;
+
+    justify-content: center;
+
     gap: 18px;
-
-    text-decoration: none;
-    color: #111827;
-
-    transition: 0.35s;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.06);
 }
 
-.card-contato:hover{
-    transform: translateY(-8px);
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(37,99,235,0.08),
-            rgba(22,163,74,0.08)
-        );
+.titulo-box-ant h2 {
+    color: #4a1989;
 
-    border-color: rgba(37,99,235,0.2);
-
-    box-shadow:
-        0 18px 35px rgba(37,99,235,0.12);
-}
-
-.card-contato i{
-    font-size: 34px;
-    color: var(--azul);
-}
-
-.card-contato h3{
-    margin-bottom: 5px;
-    color: var(--preto);
-}
-
-.card-contato p{
-    color: var(--cinza);
-}
-
-/* REFLEXAO */
-
-.reflexao-box{
-    background: white;
-
-    border-radius: 24px;
-
-    padding: 35px;
-
-    margin-bottom: 50px;
-
-    border: 1px solid rgba(0,0,0,0.05);
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.06);
-}
-
-.reflexao-box h3{
-    color: var(--verde);
-    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 
     font-size: 28px;
-}
 
-.reflexao-box p{
-    line-height: 1.9;
-    color: var(--cinza);
-}
+    font-weight: 700;
 
-/* ETERNIZAÇÃO */
-
-.eternizacao{
     text-align: center;
 }
 
-.eternizacao h3{
-    font-size: 32px;
-    margin-bottom: 30px;
 
-    color: var(--azul);
+.titulo-box-ant span {
+    color: #eb78b7;
+
+    font-size: 27px;
 }
 
-.nomes{
+
+.linha-box-ant {
+    width: 45%;
+
+    height: 2px;
+
+    margin: 7px auto 24px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #e88bbf,
+        transparent
+    );
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.cards-ant {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+
+.card-ant {
+    min-height: 215px;
+
+    padding: 0 25px;
+
+    text-align: center;
+
+    border-right:
+        1px solid #dbcce5;
+}
+
+
+.card-ant:last-child {
+    border-right: none;
+}
+
+
+/* =====================================================
+   ÍCONES
+===================================================== */
+
+.icone-ant {
+    width: 82px;
+    height: 82px;
+
+    margin: 0 auto 12px;
+
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
 
-    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #ee83b9,
+        #e98ac4
+    );
+
+    color: white;
+
+    font-size: 39px;
+
+    box-shadow:
+        0 7px 15px rgba(222,102,170,.15);
+
+    transition: .3s ease;
 }
 
-.nomes span{
-    background: white;
 
-    padding: 12px 18px;
+.card-ant:hover .icone-ant {
+    transform: translateY(-5px);
+}
 
-    border-radius: 40px;
+
+.card-ant h3 {
+    margin-bottom: 7px;
+
+    color: #431781;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+
+.card-ant p {
+    max-width: 210px;
+
+    margin: auto;
+
+    color: #332b3c;
 
     font-size: 14px;
 
-    color: var(--preto);
+    line-height: 1.55;
+}
 
-    border: 1px solid rgba(0,0,0,0.05);
+
+/* =====================================================
+   MENSAGEM FINAL
+===================================================== */
+
+.mensagem-ant {
+    position: relative;
+
+    z-index: 10;
+
+    width: min(920px, 100%);
+
+    min-height: 95px;
+
+    margin: 17px auto 0;
+
+    padding: 15px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: rgba(255,255,255,.94);
+
+    border-radius: 20px;
 
     box-shadow:
-        0 5px 15px rgba(0,0,0,0.05);
-
-    transition: 0.3s;
+        0 8px 25px rgba(91,45,135,.10);
 }
 
-.nomes span:hover{
-    transform: translateY(-4px);
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--azul),
-            var(--verde)
+.escudo-ant {
+    width: 70px;
+    height: 80px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    clip-path:
+        polygon(
+            50% 0,
+            90% 14%,
+            90% 65%,
+            50% 100%,
+            10% 65%,
+            10% 14%
         );
 
+    background: linear-gradient(
+        145deg,
+        #a96bd3,
+        #602c9f
+    );
+
     color: white;
-}
 
-.eternizacao small{
-    color: var(--cinza);
-    letter-spacing: 1px;
-}
-
-/* ============================= */
-/* 📱 MOBILE */
-/* ============================= */
-
-@media screen and (max-width: 700px){
-
-    #contato-final{
-        padding: 70px 15px;
-    }
-
-    .titulo-final h2{
-        font-size: 28px;
-    }
-
-    .titulo-final p{
-        font-size: 14px;
-    }
-
-    .card-contato{
-        width: 100%;
-    }
-
-    .reflexao-box{
-        padding: 25px;
-    }
-
-    .reflexao-box h3{
-        font-size: 22px;
-    }
-
-    .eternizacao h3{
-        font-size: 24px;
-    }
-
-    .nomes span{
-        font-size: 13px;
-        padding: 10px 15px;
-    }
-
-}
-
-/* ============================= */
-/* 📱 RESPONSIVIDADE GERAL */
-/* ============================= */
-
-/* NOTEBOOK */
-@media screen and (max-width: 1200px){
-
-    #top{
-        padding: 12px 35px;
-    }
-
-    .final-container{
-        max-width: 95%;
-    }
-
-    .titulo-final h2{
-        font-size: 38px;
-    }
-
+    font-size: 42px;
 }
 
 
-/* TABLET */
-@media screen and (max-width: 900px){
+.texto-mensagem-ant {
+    flex: 1;
+}
+
+
+.texto-mensagem-ant p {
+    color: #43167f;
+
+    font-size: 17px;
+
+    line-height: 1.45;
+
+    font-weight: 500;
+}
+
+
+.texto-mensagem-ant p:first-child {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+#rodape {
+    padding: 35px 20px 18px;
+
+    text-align: center;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #6d3bab,
+        #8b4cc8
+    );
+}
+
+
+.rodape-logo h2 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 30px;
+}
+
+
+.rodape-logo p {
+    font-size: 14px;
+
+    opacity: .9;
+}
+
+
+.rodape-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 24px;
+
+    margin: 25px 0;
+}
+
+
+.rodape-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+
+.rodape-links a:hover {
+    color: #f3a3d1;
+}
+
+
+.rodape-copy {
+    padding-top: 17px;
+
+    border-top:
+        1px solid rgba(255,255,255,.2);
+
+    font-size: 12px;
+
+    opacity: .75;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    #top {
+        padding: 8px 25px;
+    }
+
+    #nav1 {
+        gap: 17px;
+    }
+
+    .decoracao-ant {
+        right: -190px;
+
+        opacity: .25;
+    }
+
+    .cards-ant {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 25px;
+    }
+
+    .card-ant:nth-child(2) {
+        border-right: none;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
 
     /* HEADER */
-    #top{
-        padding: 12px 20px;
-    }
 
-    #nav1{
-        gap: 14px;
-    }
-
-    #nav1 a{
-        font-size: 15px;
-    }
-
-    #simbolo{
-        width: 52px;
-    }
-
-    /* CONTATO */
-    #contato-final{
-        padding: 80px 20px;
-    }
-
-    .titulo-final{
-        margin-bottom: 45px;
-    }
-
-    .titulo-final h2{
-        font-size: 32px;
-        line-height: 1.3;
-    }
-
-    .titulo-final p{
-        font-size: 15px;
-    }
-
-}
-
-
-/* CELULAR */
-@media screen and (max-width: 600px){
-
-    /* HEADER */
-    #top{
+    #top {
         flex-direction: column;
-        justify-content: center;
-        gap: 12px;
 
-        padding: 14px 15px;
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+
+        padding: 13px 12px;
+    }
+
+
+    #top1 {
+        gap: 9px;
+    }
+
+
+    #simbolo {
+        width: 47px;
+        height: 47px;
+    }
+
+
+    #nametitle h2 {
+        font-size: 23px;
+    }
+
+
+    /* NAV */
+
+    #nav1 {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 7px 16px;
+    }
+
+
+    #nav1 a {
+        font-size: 13px;
+    }
+
+
+    /* PÁGINA */
+
+    .pagina-anticoncepcionais {
+        padding: 25px 10px;
+    }
+
+
+    /* HERO */
+
+    .hero-anticoncepcionais {
+        display: block;
+
+        min-height: auto;
+
+        padding: 10px 5px 30px;
 
         text-align: center;
     }
 
-    #top1{
+
+    .marca-ant {
         justify-content: center;
     }
 
-    #nav1{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+
+    .hero-ant-texto h1 {
+        font-size: 43px;
+
+        letter-spacing: -2px;
     }
 
-    #nav1 a{
+
+    .hero-ant-texto h2 {
+        font-size: 18px;
+
+        line-height: 1.4;
+    }
+
+
+    .linha-rosa {
+        margin: 13px auto;
+    }
+
+
+    .hero-ant-texto > p {
         font-size: 14px;
-    }
 
-    #simbolo{
-        width: 48px;
-    }
-
-    /* SECTION */
-    #contato-final{
-        padding: 60px 15px;
-    }
-
-    .final-container{
-        width: 100%;
-    }
-
-    /* TITULO */
-    .titulo-final{
-        margin-bottom: 35px;
-    }
-
-    .titulo-final span{
-        font-size: 11px;
-        padding: 7px 14px;
-    }
-
-    .titulo-final h2{
-        font-size: 25px;
-        line-height: 1.3;
-
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .titulo-final p{
-        font-size: 14px;
         line-height: 1.6;
 
-        padding: 0 5px;
+        text-align: left;
     }
 
-}
 
-
-/* CELULARES MUITO PEQUENOS */
-@media screen and (max-width: 380px){
-
-    #top{
-        padding: 12px 10px;
+    .decoracao-ant {
+        display: none;
     }
 
-    #nav1 a{
-        font-size: 12px;
+
+    /* BOX */
+
+    .box-ant {
+        width: 100%;
+
+        padding: 18px 10px 20px;
+
+        border-radius: 20px;
     }
 
-    .titulo-final h2{
-        font-size: 22px;
+
+    .titulo-box-ant {
+        gap: 8px;
     }
 
-    .titulo-final p{
+
+    .titulo-box-ant h2 {
+        font-size: 19px;
+    }
+
+
+    .titulo-box-ant span {
+        font-size: 19px;
+    }
+
+
+    .linha-box-ant {
+        width: 70%;
+    }
+
+
+    /* CARDS */
+
+    .cards-ant {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card-ant {
+        min-height: auto;
+
+        padding: 27px 15px 30px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #dfd0e8;
+    }
+
+
+    .card-ant:last-child {
+        border-bottom: none;
+    }
+
+
+    .icone-ant {
+        width: 82px;
+        height: 82px;
+    }
+
+
+    .card-ant h3 {
+        font-size: 18px;
+    }
+
+
+    .card-ant p {
+        max-width: 320px;
+
+        font-size: 14px;
+    }
+
+
+    /* MENSAGEM */
+
+    .mensagem-ant {
+        width: 100%;
+
+        padding: 17px;
+
+        gap: 14px;
+
+        align-items: flex-start;
+    }
+
+
+    .escudo-ant {
+        width: 52px;
+        height: 62px;
+
+        font-size: 31px;
+    }
+
+
+    .texto-mensagem-ant p {
         font-size: 13px;
     }
 
+
+    .texto-mensagem-ant p:first-child {
+        font-size: 14px;
+    }
+
+
+    /* FOOTER */
+
+    #rodape {
+        padding: 30px 15px 15px;
+    }
+
+
+    .rodape-links {
+        gap: 13px 20px;
+    }
+
+}
+
+/* =====================================================
+   AUMENTO GERAL DO LAYOUT
+===================================================== */
+
+/* HEADER */
+#top {
+    min-height: 88px;
+    padding: 10px 55px;
+}
+
+#simbolo {
+    width: 66px;
+    height: 66px;
+}
+
+#nametitle h2 {
+    font-size: 30px;
+}
+
+#nav1 {
+    gap: 35px;
+}
+
+#nav1 a {
+    font-size: 17px;
+    padding: 10px 0;
 }
 
 
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-anticoncepcionais {
+    width: min(1450px, 100%);
+    min-height: 350px;
+}
+
+.hero-ant-texto {
+    max-width: 900px;
+}
+
+.marca-ant {
+    gap: 13px;
+    margin-bottom: 18px;
+}
+
+.logo-n-ant {
+    width: 55px;
+    height: 55px;
+    font-size: 34px;
+}
+
+.marca-ant strong {
+    font-size: 29px;
+}
+
+.marca-ant small {
+    font-size: 9px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.hero-ant-texto h1 {
+    font-size: clamp(65px, 7vw, 95px);
+}
+
+.hero-ant-texto h2 {
+    font-size: clamp(23px, 2.2vw, 31px);
+    margin-top: 15px;
+}
+
+.linha-rosa {
+    width: 120px;
+    height: 4px;
+    margin: 18px 0;
+}
+
+.hero-ant-texto > p {
+    max-width: 700px;
+    font-size: 19px;
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   DECORAÇÕES
+===================================================== */
+
+.decoracao-ant {
+    width: 600px;
+    height: 370px;
+}
+
+.simbolo-feminino {
+    font-size: 115px;
+}
+
+.simbolo-feminino.pequeno {
+    font-size: 82px;
+}
+
+.simbolo-mais {
+    font-size: 85px;
+}
+
+.utero {
+    font-size: 175px;
+}
+
+
+/* =====================================================
+   CAIXA DOS CARDS
+===================================================== */
+
+.box-ant {
+    width: min(1200px, 100%);
+    padding: 22px 30px 32px;
+    border-radius: 25px;
+}
+
+
+/* TÍTULO */
+
+.titulo-box-ant {
+    gap: 22px;
+}
+
+.titulo-box-ant h2 {
+    font-size: 32px;
+}
+
+.titulo-box-ant span {
+    font-size: 30px;
+}
+
+.linha-box-ant {
+    width: 55%;
+    margin: 10px auto 28px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card-ant {
+    min-height: 245px;
+    padding: 0 30px;
+}
+
+
+/* ÍCONES */
+
+.icone-ant {
+    width: 94px;
+    height: 94px;
+    margin-bottom: 15px;
+    font-size: 44px;
+}
+
+
+/* TÍTULOS DOS CARDS */
+
+.card-ant h3 {
+    font-size: 21px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+
+/* TEXTOS */
+
+.card-ant p {
+    max-width: 245px;
+    font-size: 15.5px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   MENSAGEM FINAL
+===================================================== */
+
+.mensagem-ant {
+    width: min(1000px, 100%);
+    min-height: 120px;
+    padding: 18px 35px;
+    gap: 30px;
+}
+
+
+/* ESCUDO */
+
+.escudo-ant {
+    width: 82px;
+    height: 92px;
+    font-size: 48px;
+}
+
+
+/* TEXTO */
+
+.texto-mensagem-ant p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.texto-mensagem-ant p:first-child {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+#rodape {
+    padding: 42px 25px 22px;
+}
+
+.rodape-logo h2 {
+    font-size: 34px;
+}
+
+.rodape-logo p {
+    font-size: 16px;
+}
+
+.rodape-links {
+    gap: 30px;
+    margin: 28px 0;
+}
+
+.rodape-links a {
+    font-size: 16px;
+}
+
+.rodape-copy {
+    font-size: 13px;
+}
+
+
+
+/* =====================================================
+   CELULAR — MAIOR, MAS SEM ESTOURAR A TELA
+===================================================== */
+
 @media (max-width: 600px) {
+
     #top {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
+        min-height: 100px;
+        padding: 14px 12px;
+    }
+
+    #simbolo {
+        width: 54px;
+        height: 54px;
+    }
+
+    #nametitle h2 {
+        font-size: 26px;
     }
 
     #nav1 {
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 9px 20px;
     }
 
     #nav1 a {
         font-size: 14px;
     }
 
-    #boto {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        margin-top: 30px
-    }
-}
 
-/* ============================= */
-/* 📱 HEADER RESPONSIVO */
-/* ============================= */
+    /* HERO */
 
-/* NOTEBOOK */
-@media screen and (max-width: 1200px){
-
-    #top{
-        padding: 12px 35px;
+    .hero-anticoncepcionais {
+        padding: 15px 8px 35px;
     }
 
-    #nav1{
+    .logo-n-ant {
+        width: 52px;
+        height: 52px;
+        font-size: 32px;
+    }
+
+    .marca-ant strong {
+        font-size: 27px;
+    }
+
+    .marca-ant small {
+        font-size: 8px;
+    }
+
+    .hero-ant-texto h1 {
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .hero-ant-texto h2 {
+        font-size: 21px;
+    }
+
+    .hero-ant-texto > p {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+
+    /* CAIXA */
+
+    .box-ant {
+        padding: 22px 12px 20px;
+    }
+
+    .titulo-box-ant h2 {
+        font-size: 22px;
+    }
+
+    .titulo-box-ant span {
+        font-size: 22px;
+    }
+
+
+    /* CARDS */
+
+    .card-ant {
+        padding: 32px 15px 35px;
+    }
+
+    .icone-ant {
+        width: 92px;
+        height: 92px;
+        font-size: 42px;
+        margin-bottom: 16px;
+    }
+
+    .card-ant h3 {
+        font-size: 21px;
+    }
+
+    .card-ant p {
+        max-width: 340px;
+        font-size: 15.5px;
+        line-height: 1.6;
+    }
+
+
+    /* MENSAGEM */
+
+    .mensagem-ant {
+        padding: 20px;
         gap: 16px;
     }
 
-}
-
-
-/* TABLET */
-@media screen and (max-width: 900px){
-
-    #top{
-        padding: 12px 20px;
+    .escudo-ant {
+        width: 60px;
+        height: 70px;
+        font-size: 35px;
     }
 
-    #nav1{
-        gap: 12px;
+    .texto-mensagem-ant p {
+        font-size: 14.5px;
     }
 
-    #nav1 a{
+    .texto-mensagem-ant p:first-child {
+        font-size: 16px;
+    }
+
+
+    /* FOOTER */
+
+    #rodape {
+        padding: 35px 15px 18px;
+    }
+
+    .rodape-logo h2 {
+        font-size: 32px;
+    }
+
+    .rodape-logo p {
         font-size: 15px;
     }
 
-    #simbolo{
-        width: 52px;
+    .rodape-links {
+        gap: 14px 22px;
     }
 
-}
-
-
-/* CELULAR */
-@media screen and (max-width: 600px){
-
-    #top{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 12px;
-
-        padding: 14px 15px;
-
-        text-align: center;
-    }
-
-    #top1{
-        justify-content: center;
-        flex-direction: row;
-    }
-
-    #nav1{
-        flex-wrap: wrap;
-        justify-content: center;
-
-        gap: 10px;
-    }
-
-    #nav1 a{
+    .rodape-links a {
         font-size: 14px;
-    }
-
-    #simbolo{
-        width: 48px;
-    }
-
-}
-
-
-/* CELULARES PEQUENOS */
-@media screen and (max-width: 380px){
-
-    #top{
-        padding: 12px 10px;
-    }
-
-    #nav1{
-        gap: 8px;
-    }
-
-    #nav1 a{
-        font-size: 12px;
-    }
-
-    #simbolo{
-        width: 42px;
     }
 
 }
