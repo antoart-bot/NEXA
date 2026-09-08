@@ -1,0 +1,1881 @@
+/* =========================================================
+   NEXA — STYLE3.CSS
+   PÁGINA DE CONTATO
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================================
+   TIPOGRAFIA NEXA
+========================================================= */
+
+body {
+    font-family: "Inter", sans-serif;
+
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================
+   TÍTULOS PRINCIPAIS
+========================= */
+
+#nametitle h2,
+.marca-contato strong,
+.titulo-contato h1,
+.titulo-contato h2,
+.titulo-box-contato h2,
+.card-contato h3,
+.foto-contato-texto h2,
+.frase-texto h2,
+.instagram-texto h2,
+.mensagem-texto-contato h3,
+.rodape-logo h2 {
+    font-family: "Poppins", sans-serif;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================
+   NEXA DO HEADER
+========================= */
+
+#nametitle h2 {
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   NEXA PEQUENO
+========================= */
+
+.marca-contato strong {
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   TÍTULO NEXA
+========================= */
+
+.titulo-contato h1 {
+    font-size: clamp(58px, 8vw, 92px);
+
+    font-weight: 700;
+
+    letter-spacing: -3px;
+
+    line-height: 0.95;
+}
+
+
+/* =========================
+   SUBTÍTULO
+========================= */
+
+.titulo-contato h2 {
+    font-size: clamp(19px, 3vw, 27px);
+
+    font-weight: 500;
+
+    letter-spacing: -0.3px;
+
+    line-height: 1.25;
+}
+
+
+/* =========================
+   TEXTO DO HERO
+========================= */
+
+.hero-texto-contato > p {
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    letter-spacing: 0.05px;
+}
+
+
+/* =========================
+   TÍTULO DA BOX
+========================= */
+
+.titulo-box-contato h2 {
+    font-size: 24px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================
+   TÍTULOS DOS CARDS
+========================= */
+
+.card-contato h3 {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.2px;
+}
+
+
+/* =========================
+   TEXTOS DOS CARDS
+========================= */
+
+.card-contato p {
+    font-family: "Inter", sans-serif;
+
+    font-size: 13.5px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.05px;
+}
+
+
+/* =========================
+   MINI TÍTULOS
+========================= */
+
+.mini-titulo-contato,
+.instagram-texto > span {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   TÍTULO DA FOTO
+========================= */
+
+.foto-contato-texto h2 {
+    font-size: clamp(28px, 4vw, 40px);
+
+    font-weight: 600;
+
+    letter-spacing: -0.8px;
+
+    line-height: 1.15;
+}
+
+
+/* =========================
+   TEXTO DA FOTO
+========================= */
+
+.foto-contato-texto p {
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   FRASE ESPECIAL
+========================= */
+
+.frase-texto h2 {
+    font-family: "Bodoni Moda", serif;
+
+    font-size: clamp(27px, 4vw, 36px);
+
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+
+    line-height: 1.25;
+}
+
+
+.frase-texto p {
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.instagram-texto h2 {
+    font-size: 21px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+}
+
+.instagram-texto p {
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MENSAGEM FINAL
+========================= */
+
+.mensagem-texto-contato h3 {
+    font-size: 21px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+}
+
+.mensagem-texto-contato p {
+    font-size: 13.5px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.rodape-logo h2 {
+    font-size: 31px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.rodape-logo p {
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.rodape-links a {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1px;
+}
+
+.rodape-copy p {
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.1px;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(232, 188, 238, 0.45),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(248, 190, 219, 0.45),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f4e9f8,
+            #eadff5,
+            #f8e7f2
+        );
+
+    color: #342b3b;
+
+    font-family: "Inter", sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+#top {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    min-height: 75px;
+
+    padding: 10px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-bottom:
+        1px solid
+        rgba(103, 54, 162, 0.08);
+
+    box-shadow:
+        0 5px 20px
+        rgba(75, 40, 110, 0.08);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* PARTE ESQUERDA */
+
+#top1 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+/* LOGO */
+
+#simbolo {
+    width: 48px;
+
+    height: 48px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 5px 15px
+        rgba(103, 54, 162, 0.15);
+}
+
+
+/* NOME */
+
+#nametitle h2 {
+    margin: 0;
+
+    color: #522092;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* NAV */
+
+#nav1 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+#nav1 a {
+    position: relative;
+
+    color: #513b5d;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease;
+}
+
+#nav1 a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: #c86d9d;
+
+    transition:
+        width 0.3s ease;
+}
+
+#nav1 a:hover {
+    color: #a45086;
+}
+
+#nav1 a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   PÁGINA
+========================================================= */
+
+.pagina-contato {
+    width: 100%;
+
+    overflow: hidden;
+
+    padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-contato {
+    position: relative;
+
+    width: min(1200px, 90%);
+
+    min-height: 410px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-texto-contato {
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 850px;
+}
+
+
+/* MARCA */
+
+.marca-contato {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.nexa-contato {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6838a3,
+            #c76da0
+        );
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 18px
+        rgba(103, 54, 162, 0.20);
+}
+
+.marca-contato div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.marca-contato strong {
+    color: #522092;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    letter-spacing: 2px;
+}
+
+.marca-contato small {
+    margin-top: 4px;
+
+    color: #795d82;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+}
+
+
+/* TÍTULO */
+
+.titulo-contato {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    margin-bottom: 25px;
+}
+
+.titulo-contato h1 {
+    color: #481480;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        55px,
+        8vw,
+        90px
+    );
+
+    line-height: .9;
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+}
+
+.titulo-contato h2 {
+    color: #4e3158;
+
+    text-align: left;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        19px,
+        3vw,
+        28px
+    );
+
+    line-height: 1.2;
+
+    font-weight: 600;
+}
+
+.linha-vertical-contato {
+    width: 2px;
+
+    height: 70px;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #c96da1,
+            #8b55bd
+        );
+}
+
+
+/* TEXTO */
+
+.hero-texto-contato > p {
+    max-width: 690px;
+
+    margin: 0 auto;
+
+    color: #3e3445;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DECORAÇÃO
+========================================================= */
+
+.decoracao-contato {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.simbolo-contato {
+    position: absolute;
+
+    top: 80px;
+
+    left: 2%;
+
+    color: rgba(121, 67, 174, 0.16);
+
+    font-family: Georgia, serif;
+
+    font-size: 95px;
+}
+
+.mais-contato {
+    position: absolute;
+
+    right: 8%;
+
+    top: 95px;
+
+    color: rgba(217, 102, 164, 0.20);
+
+    font-size: 55px;
+
+    font-weight: 300;
+}
+
+.flor-contato {
+    position: absolute;
+
+    right: 3%;
+
+    bottom: 50px;
+
+    font-size: 50px;
+
+    opacity: .55;
+
+    transform: rotate(12deg);
+}
+
+
+/* =========================================================
+   BOX PRINCIPAL
+========================================================= */
+
+.box-contato {
+    width: min(1180px, 90%);
+
+    margin: 15px auto 40px;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border:
+        1px solid
+        rgba(255,255,255,.9);
+
+    box-shadow:
+        0 15px 40px
+        rgba(74, 39, 118, 0.13);
+}
+
+
+/* TÍTULO DA BOX */
+
+.titulo-box-contato {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    text-align: center;
+}
+
+.titulo-box-contato span {
+    color: #d56ca2;
+
+    font-size: 18px;
+}
+
+.titulo-box-contato h2 {
+    color: #501b84;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+/* LINHA */
+
+.linha-box-contato {
+    width: 100%;
+
+    height: 1px;
+
+    margin: 25px 0 30px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(122, 73, 169, .20),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   CARDS SOBRE
+========================================================= */
+
+.sobre-contato {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.card-contato {
+    padding: 25px 20px;
+
+    min-height: 235px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #fbf4fc
+        );
+
+    border:
+        1px solid
+        rgba(119, 72, 165, 0.08);
+
+    box-shadow:
+        0 8px 22px
+        rgba(90, 45, 125, 0.07);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.card-contato:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(90, 45, 125, 0.14);
+}
+
+
+/* ÍCONE */
+
+.icone-contato {
+    width: 52px;
+
+    height: 52px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4d9ec,
+            #e8daf6
+        );
+
+    font-size: 25px;
+
+    box-shadow:
+        0 6px 14px
+        rgba(150, 80, 160, .08);
+}
+
+
+/* TÍTULO CARD */
+
+.card-contato h3 {
+    margin-bottom: 10px;
+
+    color: #4d197f;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+/* TEXTO CARD */
+
+.card-contato p {
+    color: #514555;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   FOTO DA TURMA
+========================================================= */
+
+.foto-contato {
+    width: min(1180px, 90%);
+
+    margin: 40px auto;
+
+    padding: 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        .95fr
+        1.05fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.96);
+
+    box-shadow:
+        0 15px 40px
+        rgba(74, 39, 118, 0.13);
+}
+
+
+/* IMAGEM */
+
+.foto-contato-imagem {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 370px;
+
+    border-radius: 22px;
+
+    background: #eadcf1;
+
+    box-shadow:
+        0 12px 28px
+        rgba(75, 40, 100, .15);
+}
+
+.foto-contato-imagem img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .5s ease;
+}
+
+.foto-contato-imagem:hover img {
+    transform: scale(1.04);
+}
+
+
+/* LEGENDA */
+
+.legenda-foto {
+    position: absolute;
+
+    left: 18px;
+
+    bottom: 18px;
+
+    padding: 9px 17px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.92);
+
+    color: #522c65;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.10);
+}
+
+
+/* TEXTO FOTO */
+
+.mini-titulo-contato {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #b75d90;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.foto-contato-texto h2 {
+    margin-bottom: 18px;
+
+    color: #4c177e;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(
+        28px,
+        4vw,
+        40px
+    );
+
+    line-height: 1.15;
+}
+
+.foto-contato-texto p {
+    margin-bottom: 14px;
+
+    color: #514555;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FRASE
+========================================================= */
+
+.frase-contato {
+    width: min(1000px, 90%);
+
+    margin: 50px auto;
+
+    padding: 45px 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9d9f5,
+            #f6dce9
+        );
+
+    box-shadow:
+        0 15px 35px
+        rgba(85, 43, 120, .10);
+}
+
+.frase-icone {
+    color: #c76d9e;
+
+    font-family: Georgia, serif;
+
+    font-size: 85px;
+
+    line-height: .6;
+}
+
+.frase-texto {
+    flex: 1;
+}
+
+.frase-texto h2 {
+    margin-bottom: 10px;
+
+    color: #4a197d;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+}
+
+.frase-texto p {
+    margin-bottom: 10px;
+
+    color: #55455a;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.frase-texto small {
+    color: #a45283;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INSTAGRAM
+========================================================= */
+
+.instagram-contato {
+    width: min(1000px, 90%);
+
+    margin: 45px auto;
+
+    padding: 28px 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 23px;
+
+    border-radius: 23px;
+
+    background:
+        rgba(255,255,255,.96);
+
+    box-shadow:
+        0 12px 30px
+        rgba(75, 40, 110, .12);
+}
+
+
+/* ÍCONE INSTAGRAM */
+
+.instagram-icone {
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #df73ad,
+            #7746b4
+        );
+
+    font-size: 29px;
+
+    box-shadow:
+        0 8px 18px
+        rgba(160, 70, 145, .18);
+}
+
+
+/* TEXTO */
+
+.instagram-texto {
+    flex: 1;
+}
+
+.instagram-texto > span {
+    color: #b45c8d;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+}
+
+.instagram-texto h2 {
+    margin: 5px 0;
+
+    color: #4c197f;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 21px;
+}
+
+.instagram-texto p {
+    color: #5a4b5e;
+
+    font-size: 13px;
+}
+
+
+/* BOTÃO */
+
+.instagram-botao {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 13px 20px;
+
+    border-radius: 50px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #df73ad,
+            #7545b2
+        );
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.instagram-botao:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 22px
+        rgba(120, 55, 160, .23);
+}
+
+.instagram-botao strong {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   MENSAGEM FINAL
+========================================================= */
+
+.mensagem-contato {
+    position: relative;
+
+    width: min(1100px, 90%);
+
+    margin: 55px auto 70px;
+
+    padding: 35px 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8d7f4,
+            #f5dce9
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(75, 40, 110, .10);
+
+    overflow: hidden;
+}
+
+.escudo-contato,
+.mulher-contato {
+    color: #8c55b8;
+
+    font-size: 45px;
+
+    font-weight: 300;
+}
+
+.mulher-contato {
+    margin-left: auto;
+
+    color: #ce70a0;
+
+    font-size: 55px;
+}
+
+.mensagem-texto-contato {
+    flex: 1;
+
+    text-align: center;
+}
+
+.mensagem-texto-contato h3 {
+    margin-bottom: 8px;
+
+    color: #4c197f;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 21px;
+}
+
+.mensagem-texto-contato p {
+    color: #58495d;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+#rodape {
+    width: 100%;
+
+    padding:
+        45px
+        25px
+        22px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6636a2,
+            #8c50c4
+        );
+
+    box-shadow:
+        0 -10px 30px
+        rgba(75, 35, 110, .10);
+}
+
+
+/* LOGO FOOTER */
+
+.rodape-logo h2 {
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.rodape-logo p {
+    margin-top: 5px;
+
+    color: rgba(255,255,255,.88);
+
+    font-size: 13px;
+}
+
+
+/* LINKS */
+
+.rodape-links {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: 28px 0;
+}
+
+.rodape-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.rodape-links a:hover {
+    color: #f5abd0;
+
+    transform: translateY(-2px);
+}
+
+
+/* COPYRIGHT */
+
+.rodape-copy {
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.18);
+}
+
+.rodape-copy p {
+    color:
+        rgba(255,255,255,.70);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .sobre-contato {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .foto-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-contato-imagem {
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    #top {
+        padding:
+            10px
+            20px;
+    }
+
+    #nav1 {
+        gap: 18px;
+    }
+
+    #nav1 a {
+        font-size: 12px;
+    }
+
+    .hero-contato {
+        width: 92%;
+
+        min-height: 450px;
+    }
+
+    .titulo-contato {
+        gap: 14px;
+    }
+
+    .titulo-contato h1 {
+        font-size: 58px;
+    }
+
+    .titulo-contato h2 {
+        font-size: 19px;
+    }
+
+    .linha-vertical-contato {
+        height: 55px;
+    }
+
+    .box-contato,
+    .foto-contato {
+        width: 92%;
+
+        padding: 25px;
+    }
+
+    .instagram-contato {
+        width: 92%;
+    }
+
+    .mensagem-contato {
+        width: 92%;
+
+        padding:
+            30px 25px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    #top {
+        min-height: 68px;
+    }
+
+    #simbolo {
+        width: 42px;
+
+        height: 42px;
+    }
+
+    #nametitle h2 {
+        font-size: 21px;
+    }
+
+    #nav1 {
+        gap: 15px;
+    }
+
+    #nav1 a {
+        font-size: 11px;
+    }
+
+
+    /* HERO */
+
+    .hero-contato {
+        min-height: 440px;
+    }
+
+    .marca-contato {
+        margin-bottom: 20px;
+    }
+
+    .titulo-contato {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .titulo-contato h1 {
+        font-size: 65px;
+
+        letter-spacing: -3px;
+    }
+
+    .linha-vertical-contato {
+        width: 65px;
+
+        height: 2px;
+    }
+
+    .titulo-contato h2 {
+        text-align: center;
+
+        font-size: 21px;
+    }
+
+    .hero-texto-contato > p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* DECORAÇÕES */
+
+    .simbolo-contato {
+        left: -10px;
+
+        top: 60px;
+
+        font-size: 70px;
+    }
+
+    .mais-contato {
+        right: 0;
+
+        top: 100px;
+
+        font-size: 40px;
+    }
+
+    .flor-contato {
+        right: 0;
+
+        bottom: 40px;
+
+        font-size: 35px;
+    }
+
+
+    /* CARDS */
+
+    .box-contato {
+        padding: 22px 18px;
+    }
+
+    .sobre-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .card-contato {
+        min-height: auto;
+
+        padding: 23px;
+    }
+
+
+    /* FOTO */
+
+    .foto-contato {
+        padding: 20px;
+
+        gap: 30px;
+    }
+
+    .foto-contato-imagem {
+        height: 280px;
+    }
+
+    .foto-contato-texto h2 {
+        font-size: 27px;
+    }
+
+
+    /* FRASE */
+
+    .frase-contato {
+        width: 92%;
+
+        padding: 30px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .frase-icone {
+        font-size: 65px;
+    }
+
+    .frase-texto h2 {
+        font-size: 25px;
+    }
+
+
+    /* INSTAGRAM */
+
+    .instagram-contato {
+        width: 92%;
+
+        padding: 25px 20px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .instagram-texto h2 {
+        font-size: 20px;
+    }
+
+    .instagram-botao {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    /* MENSAGEM */
+
+    .mensagem-contato {
+        width: 92%;
+
+        padding: 30px 20px;
+    }
+
+    .escudo-contato,
+    .mulher-contato {
+        display: none;
+    }
+
+    .mensagem-texto-contato h3 {
+        font-size: 18px;
+    }
+
+
+    /* FOOTER */
+
+    #rodape {
+        padding:
+            38px
+            15px
+            20px;
+    }
+
+    .rodape-links {
+        gap: 15px 20px;
+
+        margin: 25px 0;
+    }
+
+    .rodape-links a {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+body.nexa-escuro {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(100, 60, 120, .25),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #211a26,
+            #29202e
+        );
+
+    color: #eadde9;
+}
+
+
+body.nexa-escuro #top {
+    background:
+        rgba(30, 23, 33, .95);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+body.nexa-escuro #nametitle h2 {
+    color: #f5dceb;
+}
+
+body.nexa-escuro #nav1 a {
+    color: #dfcedd;
+}
+
+body.nexa-escuro .hero-texto-contato > p {
+    color: #d2c2d0;
+}
+
+body.nexa-escuro .titulo-contato h1 {
+    color: #edc9e0;
+}
+
+body.nexa-escuro .titulo-contato h2 {
+    color: #ddcbd9;
+}
+
+body.nexa-escuro .box-contato,
+body.nexa-escuro .foto-contato,
+body.nexa-escuro .instagram-contato {
+    background:
+        rgba(45, 34, 48, .96);
+
+    border-color:
+        rgba(255,255,255,.06);
+}
+
+body.nexa-escuro .titulo-box-contato h2,
+body.nexa-escuro .foto-contato-texto h2,
+body.nexa-escuro .instagram-texto h2,
+body.nexa-escuro .mensagem-texto-contato h3 {
+    color: #efd8e8;
+}
+
+body.nexa-escuro .card-contato {
+    background:
+        linear-gradient(
+            145deg,
+            #36293a,
+            #302633
+        );
+}
+
+body.nexa-escuro .card-contato h3 {
+    color: #edc8e0;
+}
+
+body.nexa-escuro .card-contato p,
+body.nexa-escuro .foto-contato-texto p,
+body.nexa-escuro .instagram-texto p,
+body.nexa-escuro .mensagem-texto-contato p {
+    color: #cfc0cc;
+}
+
+body.nexa-escuro .frase-contato,
+body.nexa-escuro .mensagem-contato {
+    background:
+        linear-gradient(
+            135deg,
+            #38293c,
+            #302938
+        );
+}
+
+body.nexa-escuro .frase-texto h2 {
+    color: #efd5e6;
+}
+
+body.nexa-escuro .frase-texto p {
+    color: #cfc0cc;
+}
