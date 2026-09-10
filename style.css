@@ -971,30 +971,20 @@ html{
 
 }
 @media (max-width: 600px) {
-
     #partprin {
         min-height: 100vh;
 
-        background-image: url("img/ChatGPT Image 3 de set. de 2026, 18_47_42.png");
-
+        background-image: url("img/veticaç.png");
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
         background-attachment: scroll;
-    }
 
+        height: auto;
+        padding-bottom: 80px;
+    }
 }
 
-@media (max-width: 600px) {
-
-    #partprin {
-        background-image: url("img/fundo-nexa.png");
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-    }
-
-}
 /* TÍTULO PRINCIPAL */
 #titleprin h1 {
     font-family: 'Bodoni Moda', serif !important;
