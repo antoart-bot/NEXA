@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(237, 119, 181, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(116, 53, 179, 0.15),
+            transparent 30%
+        ),
+        #f8effa;
+
+    color: #333;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+#top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 5%;
+
+    background: rgba(255,255,255,0.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #ecdff0;
+}
+
+
+#top1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+#simbolo {
+    width: 52px;
+    height: 52px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+#nametitle h2 {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 25px;
+
+    color: #572098;
+}
+
+
+#nav1 {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+#nav1 a {
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+#nav1 a:hover,
+#nav1 a.ativo {
+    color: #7435b3;
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina-ai {
+    width: min(1100px, 92%);
+
+    margin: auto;
+
+    padding: 70px 0 80px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-ai {
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 45px;
+}
+
+
+.ai-marca {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.ai-marca > span {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ed77b5,
+        #7435b3
+    );
+
+    color: white;
+
+    font-size: 22px;
+}
+
+
+.ai-marca strong {
+    display: block;
+
+    color: #572098;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 20px;
+
+    text-align: left;
+}
+
+
+.ai-marca small {
+    display: block;
+
+    color: #9c6aaf;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-align: left;
+}
+
+
+.hero-ai h1 {
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(38px, 6vw, 65px);
+
+    line-height: 1.05;
+
+    color: #34203f;
+}
+
+
+.hero-ai h1 span {
+    background: linear-gradient(
+        90deg,
+        #ed77b5,
+        #7435b3
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.hero-ai > p {
+    max-width: 650px;
+
+    margin: 22px auto 0;
+
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   CHAT
+========================= */
+
+.chat-container {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(87, 32, 152, 0.13);
+
+    border: 1px solid #eee1f2;
+}
+
+
+/* TOPO DO CHAT */
+
+.chat-topo {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 22px 28px;
+
+    background: linear-gradient(
+        135deg,
+        #7435b3,
+        #b85ca8
+    );
+
+    color: white;
+}
+
+
+.ai-avatar {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.2);
+
+    border: 2px solid rgba(255,255,255,0.7);
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 700;
+
+    font-size: 20px;
+}
+
+
+.chat-topo h2 {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 19px;
+}
+
+
+.chat-topo span {
+    font-size: 12px;
+
+    opacity: 0.9;
+}
+
+
+/* ÁREA DAS MENSAGENS */
+
+#chat {
+    height: 500px;
+
+    overflow-y: auto;
+
+    padding: 30px;
+}
+
+
+/* MENSAGEM */
+
+.mensagem {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    max-width: 85%;
+}
+
+
+.mensagem-usuario {
+    margin-left: auto;
+
+    flex-direction: row-reverse;
+}
+
+
+.avatar-pequeno {
+    flex-shrink: 0;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f0d9f3;
+
+    color: #7435b3;
+
+    font-weight: 700;
+}
+
+
+.mensagem-usuario .avatar-pequeno {
+    background: #7435b3;
+    color: white;
+}
+
+
+.balao {
+    padding: 15px 18px;
+
+    border-radius: 18px;
+
+    background: #f7f1f8;
+
+    color: #444;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+.mensagem-usuario .balao {
+    background: linear-gradient(
+        135deg,
+        #7435b3,
+        #9d52a9
+    );
+
+    color: white;
+}
+
+
+.balao p {
+    margin-bottom: 8px;
+}
+
+
+.balao p:last-child {
+    margin-bottom: 0;
+}
+
+
+.balao small {
+    display: block;
+
+    margin-top: 12px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid rgba(0,0,0,0.08);
+
+    font-size: 11px;
+
+    opacity: 0.75;
+}
+
+
+/* =========================
+   SUGESTÕES
+========================= */
+
+.sugestoes {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 0 25px 20px;
+}
+
+
+.sugestoes button {
+    border: 1px solid #e5d2ea;
+
+    background: #fff;
+
+    color: #7435b3;
+
+    padding: 10px 15px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-family: "Inter", sans-serif;
+
+    transition: 0.25s;
+}
+
+
+.sugestoes button:hover {
+    background: #f4e5f7;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+#form-chat {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 20px 25px;
+
+    border-top: 1px solid #eee4f0;
+
+    background: #fff;
+}
+
+
+#pergunta {
+    flex: 1;
+
+    border: 1px solid #dfd2e3;
+
+    outline: none;
+
+    padding: 15px 18px;
+
+    border-radius: 30px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+#pergunta:focus {
+    border-color: #9b5bb8;
+
+    box-shadow:
+        0 0 0 4px rgba(155, 91, 184, 0.1);
+}
+
+
+#enviar {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #7435b3,
+        #ed77b5
+    );
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+#enviar:hover {
+    transform: scale(1.06);
+}
+
+
+#enviar:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+#status-ai {
+    min-height: 20px;
+
+    padding: 0 28px 15px;
+
+    color: #8b6a94;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   AVISO
+========================= */
+
+.aviso-ai {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    background: #fff;
+
+    border: 1px solid #ecdff0;
+}
+
+
+.aviso-icone {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f6ddeb;
+
+    color: #7435b3;
+
+    font-weight: 700;
+}
+
+
+.aviso-ai h3 {
+    color: #572098;
+
+    font-family: "Poppins", sans-serif;
+
+    margin-bottom: 5px;
+}
+
+
+.aviso-ai p {
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+#rodape {
+    padding: 45px 7% 25px;
+
+    background: #30223a;
+
+    color: white;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.rodape-logo h2 {
+    font-family: "Poppins", sans-serif;
+
+    color: #ed9ad0;
+
+    font-size: 28px;
+}
+
+
+.rodape-logo p {
+    color: #d5cbd9;
+
+    margin-top: 6px;
+}
+
+
+.rodape-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    max-width: 600px;
+}
+
+
+.rodape-links a {
+    color: #ddd;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+
+.rodape-links a:hover {
+    color: #ed9ad0;
+}
+
+
+.rodape-copy {
+    width: 100%;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    #top {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 12px 5%;
+    }
+
+
+    #nav1 {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px 18px;
+    }
+
+
+    .pagina-ai {
+        padding-top: 45px;
+    }
+
+
+    #chat {
+        height: 55vh;
+
+        min-height: 400px;
+
+        padding: 20px;
+    }
+
+
+    .mensagem {
+        max-width: 95%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .hero-ai h1 {
+        font-size: 38px;
+    }
+
+
+    .hero-ai > p {
+        font-size: 14px;
+    }
+
+
+    .chat-topo {
+        padding: 18px;
+    }
+
+
+    #form-chat {
+        padding: 15px;
+    }
+
+
+    .sugestoes {
+        padding: 0 15px 15px;
+    }
+
+
+    .sugestoes button {
+        font-size: 12px;
+    }
+
+
+    .aviso-ai {
+        padding: 20px;
+    }
+
+}
