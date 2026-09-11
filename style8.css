@@ -1,13 +1,28 @@
-/* =========================================================
-   NEXA — STYLE3.CSS
-   PÁGINA DE CONTATO
-========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 
-/* =========================================================
-   RESET
-========================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+:root {
+    --rosa: #e45cae;
+    --rosa-claro: #f3c9e9;
+    --lilas: #ead8f1;
+    --roxo: #7840bd;
+    --roxo-claro: #9b6bd1;
+    --roxo-escuro: #46177b;
+    --roxo-profundo: #32104f;
+
+    --branco: #ffffff;
+    --fundo: #faf7fc;
+    --cinza: #6b6470;
+    --preto: #211827;
+
+    --sombra: 0 15px 40px rgba(86, 39, 120, 0.12);
+    --sombra-forte: 0 25px 60px rgba(86, 39, 120, 0.18);
+}
+
 
 * {
     margin: 0;
@@ -15,420 +30,95 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
-/* =========================================================
-   TIPOGRAFIA NEXA
-========================================================= */
 
 body {
-    font-family: "Inter", sans-serif;
-
-    font-weight: 400;
-
-    letter-spacing: 0;
-
-    -webkit-font-smoothing: antialiased;
-
-    text-rendering: optimizeLegibility;
+    background: var(--fundo);
+    color: var(--preto);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 
-/* =========================
-   TÍTULOS PRINCIPAIS
-========================= */
-
-#nametitle h2,
-.marca-contato strong,
-.titulo-contato h1,
-.titulo-contato h2,
-.titulo-box-contato h2,
-.card-contato h3,
-.foto-contato-texto h2,
-.frase-texto h2,
-.instagram-texto h2,
-.mensagem-texto-contato h3,
-.rodape-logo h2 {
-    font-family: "Poppins", sans-serif;
-
-    text-rendering: optimizeLegibility;
+a {
+    text-decoration: none;
 }
 
 
-/* =========================
-   NEXA DO HEADER
-========================= */
-
-#nametitle h2 {
-    font-size: 24px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 
-/* =========================
-   NEXA PEQUENO
-========================= */
-
-.marca-contato strong {
-    font-size: 21px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-
-/* =========================
-   TÍTULO NEXA
-========================= */
-
-.titulo-contato h1 {
-    font-size: clamp(58px, 8vw, 92px);
-
-    font-weight: 700;
-
-    letter-spacing: -3px;
-
-    line-height: 0.95;
-}
-
-
-/* =========================
-   SUBTÍTULO
-========================= */
-
-.titulo-contato h2 {
-    font-size: clamp(19px, 3vw, 27px);
-
-    font-weight: 500;
-
-    letter-spacing: -0.3px;
-
-    line-height: 1.25;
-}
-
-
-/* =========================
-   TEXTO DO HERO
-========================= */
-
-.hero-texto-contato > p {
-    font-family: "Inter", sans-serif;
-
-    font-size: 15px;
-
-    font-weight: 400;
-
-    line-height: 1.75;
-
-    letter-spacing: 0.05px;
-}
-
-
-/* =========================
-   TÍTULO DA BOX
-========================= */
-
-.titulo-box-contato h2 {
-    font-size: 24px;
-
-    font-weight: 600;
-
-    letter-spacing: -0.3px;
-}
-
-
-/* =========================
-   TÍTULOS DOS CARDS
-========================= */
-
-.card-contato h3 {
-    font-size: 18px;
-
-    font-weight: 600;
-
-    letter-spacing: -0.2px;
-}
-
-
-/* =========================
-   TEXTOS DOS CARDS
-========================= */
-
-.card-contato p {
-    font-family: "Inter", sans-serif;
-
-    font-size: 13.5px;
-
-    font-weight: 400;
-
-    line-height: 1.7;
-
-    letter-spacing: 0.05px;
-}
-
-
-/* =========================
-   MINI TÍTULOS
-========================= */
-
-.mini-titulo-contato,
-.instagram-texto > span {
-    font-family: "Poppins", sans-serif;
-
-    font-size: 10px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-}
-
-
-/* =========================
-   TÍTULO DA FOTO
-========================= */
-
-.foto-contato-texto h2 {
-    font-size: clamp(28px, 4vw, 40px);
-
-    font-weight: 600;
-
-    letter-spacing: -0.8px;
-
-    line-height: 1.15;
-}
-
-
-/* =========================
-   TEXTO DA FOTO
-========================= */
-
-.foto-contato-texto p {
-    font-family: "Inter", sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 400;
-
-    line-height: 1.75;
-}
-
-
-/* =========================
-   FRASE ESPECIAL
-========================= */
-
-.frase-texto h2 {
-    font-family: "Bodoni Moda", serif;
-
-    font-size: clamp(27px, 4vw, 36px);
-
-    font-weight: 600;
-
-    letter-spacing: -0.5px;
-
-    line-height: 1.25;
-}
-
-
-.frase-texto p {
-    font-family: "Inter", sans-serif;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================
-   INSTAGRAM
-========================= */
-
-.instagram-texto h2 {
-    font-size: 21px;
-
-    font-weight: 600;
-
-    letter-spacing: -0.3px;
-}
-
-.instagram-texto p {
-    font-size: 13px;
-
-    line-height: 1.6;
-}
-
-
-/* =========================
-   MENSAGEM FINAL
-========================= */
-
-.mensagem-texto-contato h3 {
-    font-size: 21px;
-
-    font-weight: 600;
-
-    letter-spacing: -0.3px;
-}
-
-.mensagem-texto-contato p {
-    font-size: 13.5px;
-
-    line-height: 1.65;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.rodape-logo h2 {
-    font-size: 31px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-.rodape-logo p {
-    font-size: 13px;
-
-    line-height: 1.5;
-}
-
-.rodape-links a {
-    font-family: "Poppins", sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 500;
-
-    letter-spacing: 0.1px;
-}
-
-.rodape-copy p {
-    font-family: "Inter", sans-serif;
-
-    font-size: 11px;
-
-    font-weight: 400;
-
-    letter-spacing: 0.1px;
-}
-
-body {
-    min-height: 100vh;
-
-    background:
-        radial-gradient(
-            circle at 10% 20%,
-            rgba(232, 188, 238, 0.45),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 90% 70%,
-            rgba(248, 190, 219, 0.45),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #f4e9f8,
-            #eadff5,
-            #f8e7f2
-        );
-
-    color: #342b3b;
-
-    font-family: "Inter", sans-serif;
-}
-
-
-/* =========================================================
+/* =====================================================
    HEADER
-========================================================= */
+===================================================== */
 
 #top {
-    position: sticky;
+    width: 100%;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 50px;
+
+    background: rgba(239, 215, 243, 0.95);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(91, 42, 137, 0.10);
+
+    position: sticky;
     top: 0;
 
     z-index: 1000;
-
-    width: 100%;
-
-    min-height: 75px;
-
-    padding: 10px 5%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    background: rgba(255, 255, 255, 0.92);
-
-    border-bottom:
-        1px solid
-        rgba(103, 54, 162, 0.08);
-
-    box-shadow:
-        0 5px 20px
-        rgba(75, 40, 110, 0.08);
-
-    backdrop-filter: blur(15px);
 }
 
-
-/* PARTE ESQUERDA */
 
 #top1 {
     display: flex;
-
     align-items: center;
-
-    gap: 13px;
+    gap: 12px;
 }
 
-
-/* LOGO */
 
 #simbolo {
-    width: 48px;
+    width: 58px;
+    height: 58px;
 
-    height: 48px;
+    object-fit: contain;
 
-    display: block;
+    border-radius: 8px;
 
-    object-fit: cover;
+    transition: 0.3s ease;
 
-    border-radius: 50%;
-
-    box-shadow:
-        0 5px 15px
-        rgba(103, 54, 162, 0.15);
+    filter: drop-shadow(0 5px 12px rgba(80, 35, 130, 0.15));
 }
 
 
-/* NOME */
+#simbolo:hover {
+    transform: scale(1.06) rotate(-2deg);
+}
+
 
 #nametitle h2 {
     margin: 0;
 
-    color: #522092;
+    font-family: 'Poppins', sans-serif;
 
-    font-family: "Poppins", sans-serif;
-
-    font-size: 25px;
-
+    font-size: 27px;
     font-weight: 700;
 
     letter-spacing: 1px;
+
+    color: #6326a4;
 }
 
 
@@ -436,640 +126,510 @@ body {
 
 #nav1 {
     display: flex;
-
     align-items: center;
-
-    gap: 30px;
+    gap: 28px;
 }
+
 
 #nav1 a {
     position: relative;
 
-    color: #513b5d;
+    padding: 8px 0;
 
-    text-decoration: none;
+    color: #672778;
 
-    font-family: "Poppins", sans-serif;
+    font-family: 'Inter', sans-serif;
 
-    font-size: 14px;
-
+    font-size: 15px;
     font-weight: 600;
 
-    transition:
-        color 0.3s ease;
+    transition: 0.3s ease;
 }
+
 
 #nav1 a::after {
     content: "";
 
     position: absolute;
 
-    left: 0;
-
-    bottom: -7px;
+    left: 50%;
+    bottom: 0;
 
     width: 0;
+    height: 3px;
 
-    height: 2px;
+    transform: translateX(-50%);
 
     border-radius: 10px;
 
-    background: #c86d9d;
+    background: linear-gradient(
+        90deg,
+        #e45cae,
+        #7840bd
+    );
 
-    transition:
-        width 0.3s ease;
+    transition: 0.3s ease;
 }
+
 
 #nav1 a:hover {
-    color: #a45086;
+    color: #46177b;
 }
+
 
 #nav1 a:hover::after {
     width: 100%;
 }
 
 
-/* =========================================================
-   PÁGINA
-========================================================= */
+/* LINK DA PÁGINA ATUAL */
 
-.pagina-contato {
+#nav1 a.ativo {
+    color: #46177b;
+}
+
+
+#nav1 a.ativo::after {
     width: 100%;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.contato-hero {
+    min-height: 620px;
+
+    padding: 90px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
 
     overflow: hidden;
 
-    padding-bottom: 20px;
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(228, 92, 174, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(120, 64, 189, 0.16),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #faf3fb,
+            #eee0f5
+        );
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
+.hero-conteudo {
+    max-width: 700px;
 
-.hero-contato {
     position: relative;
 
-    width: min(1200px, 90%);
-
-    min-height: 410px;
-
-    margin: 0 auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-}
-
-.hero-texto-contato {
-    position: relative;
-
-    z-index: 5;
-
-    max-width: 850px;
+    z-index: 2;
 }
 
 
-/* MARCA */
-
-.marca-contato {
-    display: flex;
+.hero-tag {
+    display: inline-flex;
 
     align-items: center;
+    gap: 8px;
 
-    justify-content: center;
+    padding: 9px 17px;
 
-    gap: 12px;
+    margin-bottom: 22px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.65);
+
+    border: 1px solid rgba(120,64,189,0.14);
+
+    color: var(--roxo);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.hero-conteudo h1 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(45px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    color: var(--roxo-profundo);
 
     margin-bottom: 25px;
 }
 
-.nexa-contato {
-    width: 42px;
 
-    height: 42px;
+.hero-conteudo h1 span {
+    background: linear-gradient(
+        90deg,
+        #e45cae,
+        #7840bd
+    );
 
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.hero-conteudo p {
+    max-width: 600px;
+
+    color: var(--cinza);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 32px;
+}
+
+
+/* BOTÕES */
+
+.hero-botoes {
     display: flex;
 
-    align-items: center;
+    flex-wrap: wrap;
 
+    gap: 14px;
+}
+
+
+.btn-principal,
+.btn-secundario {
+    display: inline-flex;
+
+    align-items: center;
     justify-content: center;
 
-    border-radius: 50%;
+    gap: 10px;
 
-    color: white;
+    padding: 14px 23px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #6838a3,
-            #c76da0
-        );
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 22px;
+    border-radius: 13px;
 
     font-weight: 700;
 
-    box-shadow:
-        0 7px 18px
-        rgba(103, 54, 162, 0.20);
+    transition: 0.3s ease;
 }
 
-.marca-contato div {
-    display: flex;
 
+.btn-principal {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #7840bd,
+        #a55bd1
+    );
+
+    box-shadow: 0 10px 25px rgba(120,64,189,0.25);
+}
+
+
+.btn-principal:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 30px rgba(120,64,189,0.32);
+}
+
+
+.btn-secundario {
+    color: var(--roxo-escuro);
+
+    background: rgba(255,255,255,0.7);
+
+    border: 1px solid rgba(120,64,189,0.18);
+}
+
+
+.btn-secundario:hover {
+    transform: translateY(-4px);
+
+    background: white;
+
+    box-shadow: var(--sombra);
+}
+
+
+/* =====================================================
+   DECORAÇÃO HERO
+===================================================== */
+
+.hero-decoracao {
+    width: 400px;
+    height: 400px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.circulo {
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+
+.circulo-1 {
+    width: 330px;
+    height: 330px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(228,92,174,0.35),
+        rgba(120,64,189,0.28)
+    );
+
+    filter: blur(2px);
+
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+
+.circulo-2 {
+    width: 230px;
+    height: 230px;
+
+    border: 2px solid rgba(120,64,189,0.18);
+
+    animation: girar 12s linear infinite;
+}
+
+
+.hero-card {
+    width: 235px;
+    min-height: 245px;
+
+    padding: 35px 25px;
+
+    position: relative;
+    z-index: 3;
+
+    display: flex;
     flex-direction: column;
 
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.72);
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: var(--sombra-forte);
+
+    animation: flutuar 4s ease-in-out infinite;
 }
 
-.marca-contato strong {
-    color: #522092;
 
-    font-family: "Poppins", sans-serif;
+.hero-card i {
+    width: 75px;
+    height: 75px;
 
-    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    line-height: 1;
+    margin-bottom: 18px;
+
+    border-radius: 22px;
+
+    color: white;
+
+    font-size: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #e45cae,
+        #7840bd
+    );
+
+    box-shadow: 0 12px 25px rgba(120,64,189,0.25);
+}
+
+
+.hero-card h3 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 26px;
+
+    color: var(--roxo-escuro);
+
+    margin-bottom: 6px;
+}
+
+
+.hero-card p {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin: 0;
+
+    color: var(--cinza);
+}
+
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.sobre-nexa {
+    padding: 100px 8%;
+
+    background: white;
+}
+
+
+.titulo-secao {
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+
+.titulo-secao > span {
+    color: var(--rosa);
+
+    font-size: 12px;
+
+    font-weight: 800;
 
     letter-spacing: 2px;
 }
 
-.marca-contato small {
-    margin-top: 4px;
 
-    color: #795d82;
+.titulo-secao h2 {
+    margin: 13px 0 17px;
 
-    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
 
-    font-weight: 700;
+    font-size: clamp(32px, 4vw, 48px);
 
-    letter-spacing: 1.7px;
+    color: var(--roxo-profundo);
 }
 
 
-/* TÍTULO */
-
-.titulo-contato {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 22px;
-
-    margin-bottom: 25px;
-}
-
-.titulo-contato h1 {
-    color: #481480;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: clamp(
-        55px,
-        8vw,
-        90px
-    );
-
-    line-height: .9;
-
-    font-weight: 800;
-
-    letter-spacing: -4px;
-}
-
-.titulo-contato h2 {
-    color: #4e3158;
-
-    text-align: left;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: clamp(
-        19px,
-        3vw,
-        28px
-    );
-
-    line-height: 1.2;
-
-    font-weight: 600;
-}
-
-.linha-vertical-contato {
-    width: 2px;
-
-    height: 70px;
-
-    border-radius: 5px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            #c96da1,
-            #8b55bd
-        );
+.titulo-secao h2 strong {
+    color: var(--roxo);
 }
 
 
-/* TEXTO */
-
-.hero-texto-contato > p {
-    max-width: 690px;
-
-    margin: 0 auto;
-
-    color: #3e3445;
-
-    font-size: 16px;
+.titulo-secao p {
+    color: var(--cinza);
 
     line-height: 1.7;
+
+    font-size: 16px;
 }
 
 
-/* =========================================================
-   DECORAÇÃO
-========================================================= */
+.cards-sobre {
+    max-width: 1200px;
 
-.decoracao-contato {
-    position: absolute;
+    margin: auto;
 
-    inset: 0;
-
-    pointer-events: none;
-
-    z-index: 1;
-}
-
-.simbolo-contato {
-    position: absolute;
-
-    top: 80px;
-
-    left: 2%;
-
-    color: rgba(121, 67, 174, 0.16);
-
-    font-family: Georgia, serif;
-
-    font-size: 95px;
-}
-
-.mais-contato {
-    position: absolute;
-
-    right: 8%;
-
-    top: 95px;
-
-    color: rgba(217, 102, 164, 0.20);
-
-    font-size: 55px;
-
-    font-weight: 300;
-}
-
-.flor-contato {
-    position: absolute;
-
-    right: 3%;
-
-    bottom: 50px;
-
-    font-size: 50px;
-
-    opacity: .55;
-
-    transform: rotate(12deg);
-}
-
-
-/* =========================================================
-   BOX PRINCIPAL
-========================================================= */
-
-.box-contato {
-    width: min(1180px, 90%);
-
-    margin: 15px auto 40px;
-
-    padding: 35px;
-
-    border-radius: 25px;
-
-    background:
-        rgba(255, 255, 255, 0.96);
-
-    border:
-        1px solid
-        rgba(255,255,255,.9);
-
-    box-shadow:
-        0 15px 40px
-        rgba(74, 39, 118, 0.13);
-}
-
-
-/* TÍTULO DA BOX */
-
-.titulo-box-contato {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 18px;
-
-    text-align: center;
-}
-
-.titulo-box-contato span {
-    color: #d56ca2;
-
-    font-size: 18px;
-}
-
-.titulo-box-contato h2 {
-    color: #501b84;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 25px;
-
-    font-weight: 700;
-}
-
-
-/* LINHA */
-
-.linha-box-contato {
-    width: 100%;
-
-    height: 1px;
-
-    margin: 25px 0 30px;
-
-    background:
-        linear-gradient(
-            to right,
-            transparent,
-            rgba(122, 73, 169, .20),
-            transparent
-        );
-}
-
-
-/* =========================================================
-   CARDS SOBRE
-========================================================= */
-
-.sobre-contato {
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
 }
 
-.card-contato {
-    padding: 25px 20px;
 
-    min-height: 235px;
-
-    border-radius: 20px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #fff,
-            #fbf4fc
-        );
-
-    border:
-        1px solid
-        rgba(119, 72, 165, 0.08);
-
-    box-shadow:
-        0 8px 22px
-        rgba(90, 45, 125, 0.07);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
-}
-
-.card-contato:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 15px 30px
-        rgba(90, 45, 125, 0.14);
-}
-
-
-/* ÍCONE */
-
-.icone-contato {
-    width: 52px;
-
-    height: 52px;
-
-    margin-bottom: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 16px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f4d9ec,
-            #e8daf6
-        );
-
-    font-size: 25px;
-
-    box-shadow:
-        0 6px 14px
-        rgba(150, 80, 160, .08);
-}
-
-
-/* TÍTULO CARD */
-
-.card-contato h3 {
-    margin-bottom: 10px;
-
-    color: #4d197f;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 18px;
-
-    font-weight: 700;
-}
-
-
-/* TEXTO CARD */
-
-.card-contato p {
-    color: #514555;
-
-    font-size: 13px;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   FOTO DA TURMA
-========================================================= */
-
-.foto-contato {
-    width: min(1180px, 90%);
-
-    margin: 40px auto;
-
-    padding: 35px;
-
-    display: grid;
-
-    grid-template-columns:
-        .95fr
-        1.05fr;
-
-    gap: 50px;
-
-    align-items: center;
-
-    border-radius: 25px;
-
-    background:
-        rgba(255,255,255,.96);
-
-    box-shadow:
-        0 15px 40px
-        rgba(74, 39, 118, 0.13);
-}
-
-
-/* IMAGEM */
-
-.foto-contato-imagem {
-    position: relative;
-
-    overflow: hidden;
-
-    height: 370px;
+.card-sobre {
+    padding: 30px 25px;
 
     border-radius: 22px;
 
-    background: #eadcf1;
+    background: #fbf8fd;
 
-    box-shadow:
-        0 12px 28px
-        rgba(75, 40, 100, .15);
-}
+    border: 1px solid rgba(120,64,189,0.08);
 
-.foto-contato-imagem img {
-    width: 100%;
-
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition:
-        transform .5s ease;
-}
-
-.foto-contato-imagem:hover img {
-    transform: scale(1.04);
+    transition: 0.35s ease;
 }
 
 
-/* LEGENDA */
+.card-sobre:hover {
+    transform: translateY(-10px);
 
-.legenda-foto {
-    position: absolute;
+    background: white;
 
-    left: 18px;
-
-    bottom: 18px;
-
-    padding: 9px 17px;
-
-    border-radius: 30px;
-
-    background:
-        rgba(255,255,255,.92);
-
-    color: #522c65;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    box-shadow:
-        0 5px 15px
-        rgba(0,0,0,.10);
+    box-shadow: var(--sombra);
 }
 
 
-/* TEXTO FOTO */
+.icone-card {
+    width: 58px;
+    height: 58px;
 
-.mini-titulo-contato {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 17px;
+
+    color: white;
+
+    font-size: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #e45cae,
+        #7840bd
+    );
+}
+
+
+.card-sobre h3 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 20px;
+
+    color: var(--roxo-escuro);
 
     margin-bottom: 10px;
-
-    color: #b75d90;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
 }
 
-.foto-contato-texto h2 {
-    margin-bottom: 18px;
 
-    color: #4c177e;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: clamp(
-        28px,
-        4vw,
-        40px
-    );
-
-    line-height: 1.15;
-}
-
-.foto-contato-texto p {
-    margin-bottom: 14px;
-
-    color: #514555;
+.card-sobre p {
+    color: var(--cinza);
 
     font-size: 14px;
 
@@ -1077,16 +637,488 @@ body {
 }
 
 
-/* =========================================================
-   FRASE
-========================================================= */
+/* =====================================================
+   NEXA IA
+===================================================== */
 
-.frase-contato {
-    width: min(1000px, 90%);
+.nexa-ai-destaque {
+    min-height: 520px;
 
-    margin: 50px auto;
+    margin: 20px 5%;
 
-    padding: 45px 50px;
+    padding: 75px 8%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    border-radius: 40px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(228,92,174,0.30),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(170,110,230,0.30),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #3b155d,
+            #6d2e9d,
+            #8c3db2
+        );
+
+    box-shadow: var(--sombra-forte);
+}
+
+
+.ai-conteudo {
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+.ai-tag {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 16px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    color: #f8d9f2;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.ai-conteudo h2 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(40px, 5vw, 60px);
+
+    line-height: 1.1;
+
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+
+.ai-conteudo h2 strong {
+    background: linear-gradient(
+        90deg,
+        #f59bcf,
+        #d8a9ff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.ai-conteudo > p {
+    max-width: 590px;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
+}
+
+
+/* RECURSOS */
+
+.ai-recursos {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+.ai-recursos div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.10);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    color: white;
+
+    font-size: 13px;
+}
+
+
+.ai-recursos i {
+    color: #f3a7d6;
+}
+
+
+/* BOTÃO IA */
+
+.btn-ai {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 24px;
+
+    border-radius: 14px;
+
+    color: var(--roxo-escuro);
+
+    background: white;
+
+    font-weight: 800;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+
+    transition: 0.3s ease;
+}
+
+
+.btn-ai:hover {
+    transform: translateY(-5px) scale(1.02);
+
+    box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+}
+
+
+.btn-ai i:first-child {
+    color: #7840bd;
+}
+
+
+.btn-ai i:last-child {
+    transition: 0.3s ease;
+}
+
+
+.btn-ai:hover i:last-child {
+    transform: translateX(5px);
+}
+
+
+/* VISUAL IA */
+
+.ai-visual {
+    width: 330px;
+    height: 330px;
+
+    flex-shrink: 0;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ai-orbita {
+    width: 270px;
+    height: 270px;
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    animation: girar 15s linear infinite;
+}
+
+
+.ai-orbita::before,
+.ai-orbita::after {
+    content: "";
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #f3a7d6;
+
+    box-shadow: 0 0 20px rgba(243,167,214,0.8);
+}
+
+
+.ai-orbita::before {
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+.ai-orbita::after {
+    bottom: 20px;
+    right: 30px;
+}
+
+
+.ai-icon {
+    width: 145px;
+    height: 145px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 3;
+
+    border-radius: 40px;
+
+    color: white;
+
+    font-size: 60px;
+
+    background: rgba(255,255,255,0.13);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.20),
+        inset 0 0 30px rgba(255,255,255,0.08);
+
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+
+.ai-ponto {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    border-radius: 16px;
+
+    color: white;
+
+    background: rgba(255,255,255,0.13);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 4;
+
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+
+.ponto-1 {
+    top: 15px;
+    left: 20px;
+}
+
+
+.ponto-2 {
+    right: 5px;
+    top: 100px;
+
+    animation-delay: 0.5s;
+}
+
+
+.ponto-3 {
+    bottom: 20px;
+    left: 40px;
+
+    animation-delay: 1s;
+}
+
+
+/* =====================================================
+   IMAGEM / MISSÃO
+===================================================== */
+
+.imagem-projeto {
+    max-width: 1200px;
+
+    margin: 100px auto;
+
+    padding: 0 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+.imagem-box {
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    box-shadow: var(--sombra-forte);
+}
+
+
+.imagem-box img {
+    width: 100%;
+
+    height: 440px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.6s ease;
+}
+
+
+.imagem-box:hover img {
+    transform: scale(1.05);
+}
+
+
+.imagem-texto > span {
+    color: var(--rosa);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.imagem-texto h2 {
+    margin: 15px 0 20px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    color: var(--roxo-profundo);
+}
+
+
+.imagem-texto h2 strong {
+    color: var(--rosa);
+}
+
+
+.imagem-texto > p {
+    color: var(--cinza);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.frase-destaque {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 28px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: #f4e7f8;
+
+    border-left: 4px solid var(--rosa);
+
+    color: var(--roxo-escuro);
+
+    font-weight: 600;
+
+    line-height: 1.6;
+}
+
+
+.frase-destaque i {
+    color: var(--rosa);
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   INSTAGRAM
+===================================================== */
+
+.instagram-section {
+    padding: 20px 7% 100px;
+}
+
+
+.instagram-card {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 35px 40px;
 
     display: flex;
 
@@ -1096,423 +1128,357 @@ body {
 
     border-radius: 25px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #e9d9f5,
-            #f6dce9
-        );
+    background: white;
 
-    box-shadow:
-        0 15px 35px
-        rgba(85, 43, 120, .10);
+    border: 1px solid rgba(120,64,189,0.10);
+
+    box-shadow: var(--sombra);
 }
 
-.frase-icone {
-    color: #c76d9e;
-
-    font-family: Georgia, serif;
-
-    font-size: 85px;
-
-    line-height: .6;
-}
-
-.frase-texto {
-    flex: 1;
-}
-
-.frase-texto h2 {
-    margin-bottom: 10px;
-
-    color: #4a197d;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 30px;
-
-    line-height: 1.2;
-}
-
-.frase-texto p {
-    margin-bottom: 10px;
-
-    color: #55455a;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-}
-
-.frase-texto small {
-    color: #a45283;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   INSTAGRAM
-========================================================= */
-
-.instagram-contato {
-    width: min(1000px, 90%);
-
-    margin: 45px auto;
-
-    padding: 28px 32px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 23px;
-
-    border-radius: 23px;
-
-    background:
-        rgba(255,255,255,.96);
-
-    box-shadow:
-        0 12px 30px
-        rgba(75, 40, 110, .12);
-}
-
-
-/* ÍCONE INSTAGRAM */
 
 .instagram-icone {
-    width: 65px;
-
-    height: 65px;
+    width: 75px;
+    height: 75px;
 
     flex-shrink: 0;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    border-radius: 18px;
+    border-radius: 22px;
 
     color: white;
 
-    background:
-        linear-gradient(
-            135deg,
-            #df73ad,
-            #7746b4
-        );
+    font-size: 32px;
 
-    font-size: 29px;
-
-    box-shadow:
-        0 8px 18px
-        rgba(160, 70, 145, .18);
+    background: linear-gradient(
+        135deg,
+        #e45cae,
+        #7840bd
+    );
 }
 
-
-/* TEXTO */
 
 .instagram-texto {
     flex: 1;
 }
 
-.instagram-texto > span {
-    color: #b45c8d;
 
-    font-family: "Poppins", sans-serif;
+.instagram-texto span {
+    color: var(--rosa);
 
-    font-size: 9px;
+    font-size: 11px;
 
-    font-weight: 700;
+    font-weight: 800;
 
-    letter-spacing: 1.7px;
+    letter-spacing: 1.5px;
 }
+
 
 .instagram-texto h2 {
     margin: 5px 0;
 
-    color: #4c197f;
+    font-family: 'Poppins', sans-serif;
 
-    font-family: "Poppins", sans-serif;
+    font-size: 26px;
 
-    font-size: 21px;
+    color: var(--roxo-escuro);
 }
+
 
 .instagram-texto p {
-    color: #5a4b5e;
+    color: var(--cinza);
 
-    font-size: 13px;
+    font-size: 14px;
+
+    line-height: 1.6;
 }
 
 
-/* BOTÃO */
-
-.instagram-botao {
-    display: flex;
+.instagram-btn {
+    display: inline-flex;
 
     align-items: center;
 
-    gap: 11px;
+    gap: 10px;
 
-    padding: 13px 20px;
+    padding: 13px 19px;
 
-    border-radius: 50px;
+    border-radius: 12px;
 
     color: white;
 
-    background:
-        linear-gradient(
-            135deg,
-            #df73ad,
-            #7545b2
-        );
-
-    text-decoration: none;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    white-space: nowrap;
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
-}
-
-.instagram-botao:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 10px 22px
-        rgba(120, 55, 160, .23);
-}
-
-.instagram-botao strong {
-    font-size: 18px;
-}
-
-
-/* =========================================================
-   MENSAGEM FINAL
-========================================================= */
-
-.mensagem-contato {
-    position: relative;
-
-    width: min(1100px, 90%);
-
-    margin: 55px auto 70px;
-
-    padding: 35px 45px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-
-    border-radius: 25px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #e8d7f4,
-            #f5dce9
-        );
-
-    box-shadow:
-        0 12px 30px
-        rgba(75, 40, 110, .10);
-
-    overflow: hidden;
-}
-
-.escudo-contato,
-.mulher-contato {
-    color: #8c55b8;
-
-    font-size: 45px;
-
-    font-weight: 300;
-}
-
-.mulher-contato {
-    margin-left: auto;
-
-    color: #ce70a0;
-
-    font-size: 55px;
-}
-
-.mensagem-texto-contato {
-    flex: 1;
-
-    text-align: center;
-}
-
-.mensagem-texto-contato h3 {
-    margin-bottom: 8px;
-
-    color: #4c197f;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 21px;
-}
-
-.mensagem-texto-contato p {
-    color: #58495d;
+    background: linear-gradient(
+        135deg,
+        #7840bd,
+        #e45cae
+    );
 
     font-size: 13px;
-
-    line-height: 1.5;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-#rodape {
-    width: 100%;
-
-    padding:
-        45px
-        25px
-        22px;
-
-    text-align: center;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #6636a2,
-            #8c50c4
-        );
-
-    box-shadow:
-        0 -10px 30px
-        rgba(75, 35, 110, .10);
-}
-
-
-/* LOGO FOOTER */
-
-.rodape-logo h2 {
-    color: white;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 32px;
 
     font-weight: 700;
 
-    letter-spacing: 2px;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
 }
+
+
+.instagram-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(120,64,189,0.22);
+}
+
+
+/* =====================================================
+   MENSAGEM FINAL
+===================================================== */
+
+.mensagem-final {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0,
+            rgba(228,92,174,0.18),
+            transparent 35%
+        ),
+        #f2e5f6;
+}
+
+
+.mensagem-conteudo {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+.mensagem-conteudo > span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--rosa);
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    font-size: 12px;
+}
+
+
+.mensagem-conteudo h2 {
+    margin: 18px 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.1;
+
+    color: var(--roxo-profundo);
+}
+
+
+.mensagem-conteudo p {
+    max-width: 550px;
+
+    margin: auto auto 28px;
+
+    color: var(--cinza);
+
+    line-height: 1.8;
+}
+
+
+.btn-final {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    border-radius: 13px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #7040B5,
+        #e45cae
+    );
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.btn-final:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 30px rgba(120,64,189,0.25);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+#rodape {
+    background: linear-gradient(
+        135deg,
+        #7040B5,
+        #8B4CC7
+    );
+
+    color: white;
+
+    padding: 45px 20px 18px;
+
+    text-align: center;
+}
+
+
+.rodape-logo h2 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+}
+
 
 .rodape-logo p {
-    margin-top: 5px;
+    font-size: 14px;
 
-    color: rgba(255,255,255,.88);
-
-    font-size: 13px;
+    opacity: 0.9;
 }
 
-
-/* LINKS */
 
 .rodape-links {
     display: flex;
 
     justify-content: center;
 
-    align-items: center;
-
     flex-wrap: wrap;
 
     gap: 25px;
 
-    margin: 28px 0;
+    margin: 30px 0;
 }
+
 
 .rodape-links a {
     color: white;
 
-    text-decoration: none;
+    font-size: 14px;
 
-    font-family: "Poppins", sans-serif;
-
-    font-size: 13px;
-
-    transition:
-        color .3s ease,
-        transform .3s ease;
+    transition: 0.3s;
 }
 
+
 .rodape-links a:hover {
-    color: #f5abd0;
+    color: #f3b0dc;
 
     transform: translateY(-2px);
 }
 
 
-/* COPYRIGHT */
+.rodape-social {
+    margin-bottom: 25px;
+}
+
+
+.rodape-social a {
+    width: 43px;
+    height: 43px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background: rgba(255,255,255,0.12);
+
+    transition: 0.3s ease;
+}
+
+
+.rodape-social a:hover {
+    background: rgba(255,255,255,0.22);
+
+    transform: translateY(-4px);
+}
+
 
 .rodape-copy {
+    border-top: 1px solid rgba(255,255,255,0.2);
+
     padding-top: 20px;
 
-    border-top:
-        1px solid
-        rgba(255,255,255,.18);
-}
+    font-size: 12px;
 
-.rodape-copy p {
-    color:
-        rgba(255,255,255,.70);
-
-    font-size: 11px;
+    opacity: 0.8;
 }
 
 
-/* =========================================================
+.rodape-copy p + p {
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
    RESPONSIVIDADE
-========================================================= */
+===================================================== */
 
 @media (max-width: 1000px) {
 
-    .sobre-contato {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .foto-contato {
-        grid-template-columns: 1fr;
-    }
-
-    .foto-contato-imagem {
-        height: 400px;
-    }
-}
-
-
-@media (max-width: 750px) {
-
     #top {
-        padding:
-            10px
-            20px;
+        padding: 8px 25px;
     }
 
     #nav1 {
@@ -1520,362 +1486,408 @@ body {
     }
 
     #nav1 a {
-        font-size: 12px;
+        font-size: 13px;
     }
 
-    .hero-contato {
-        width: 92%;
 
-        min-height: 450px;
+    .contato-hero {
+        padding: 70px 6%;
     }
 
-    .titulo-contato {
-        gap: 14px;
+
+    .hero-decoracao {
+        width: 320px;
+        height: 320px;
     }
 
-    .titulo-contato h1 {
-        font-size: 58px;
+
+    .cards-sobre {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .titulo-contato h2 {
-        font-size: 19px;
+
+    .nexa-ai-destaque {
+        padding: 60px 6%;
     }
 
-    .linha-vertical-contato {
-        height: 55px;
-    }
-
-    .box-contato,
-    .foto-contato {
-        width: 92%;
-
-        padding: 25px;
-    }
-
-    .instagram-contato {
-        width: 92%;
-    }
-
-    .mensagem-contato {
-        width: 92%;
-
-        padding:
-            30px 25px;
-    }
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+
+    /* HEADER */
 
     #top {
-        min-height: 68px;
-    }
+        padding: 10px 18px;
 
-    #simbolo {
-        width: 42px;
-
-        height: 42px;
-    }
-
-    #nametitle h2 {
-        font-size: 21px;
-    }
-
-    #nav1 {
-        gap: 15px;
-    }
-
-    #nav1 a {
-        font-size: 11px;
-    }
-
-
-    /* HERO */
-
-    .hero-contato {
-        min-height: 440px;
-    }
-
-    .marca-contato {
-        margin-bottom: 20px;
-    }
-
-    .titulo-contato {
         flex-direction: column;
 
         gap: 10px;
     }
 
-    .titulo-contato h1 {
-        font-size: 65px;
 
-        letter-spacing: -3px;
-    }
-
-    .linha-vertical-contato {
-        width: 65px;
-
-        height: 2px;
-    }
-
-    .titulo-contato h2 {
-        text-align: center;
-
-        font-size: 21px;
-    }
-
-    .hero-texto-contato > p {
-        font-size: 14px;
-
-        line-height: 1.6;
-    }
-
-
-    /* DECORAÇÕES */
-
-    .simbolo-contato {
-        left: -10px;
-
-        top: 60px;
-
-        font-size: 70px;
-    }
-
-    .mais-contato {
-        right: 0;
-
-        top: 100px;
-
-        font-size: 40px;
-    }
-
-    .flor-contato {
-        right: 0;
-
-        bottom: 40px;
-
-        font-size: 35px;
-    }
-
-
-    /* CARDS */
-
-    .box-contato {
-        padding: 22px 18px;
-    }
-
-    .sobre-contato {
-        grid-template-columns: 1fr;
-    }
-
-    .card-contato {
-        min-height: auto;
-
-        padding: 23px;
-    }
-
-
-    /* FOTO */
-
-    .foto-contato {
-        padding: 20px;
-
-        gap: 30px;
-    }
-
-    .foto-contato-imagem {
-        height: 280px;
-    }
-
-    .foto-contato-texto h2 {
-        font-size: 27px;
-    }
-
-
-    /* FRASE */
-
-    .frase-contato {
-        width: 92%;
-
-        padding: 30px 25px;
-
-        flex-direction: column;
-
-        text-align: center;
-    }
-
-    .frase-icone {
-        font-size: 65px;
-    }
-
-    .frase-texto h2 {
-        font-size: 25px;
-    }
-
-
-    /* INSTAGRAM */
-
-    .instagram-contato {
-        width: 92%;
-
-        padding: 25px 20px;
-
-        flex-direction: column;
-
-        text-align: center;
-    }
-
-    .instagram-texto h2 {
-        font-size: 20px;
-    }
-
-    .instagram-botao {
+    #top1 {
         width: 100%;
 
         justify-content: center;
     }
 
 
-    /* MENSAGEM */
+    #nav1 {
+        width: 100%;
 
-    .mensagem-contato {
-        width: 92%;
+        justify-content: center;
 
-        padding: 30px 20px;
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
     }
 
-    .escudo-contato,
-    .mulher-contato {
-        display: none;
+
+    #nav1 a {
+        font-size: 13px;
     }
 
-    .mensagem-texto-contato h3 {
-        font-size: 18px;
+
+    /* HERO */
+
+    .contato-hero {
+        min-height: auto;
+
+        padding: 70px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 55px;
+    }
+
+
+    .hero-conteudo {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .hero-conteudo p {
+        font-size: 15px;
+    }
+
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+
+    /* IA */
+
+    .nexa-ai-destaque {
+        margin: 20px;
+
+        padding: 60px 30px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        border-radius: 30px;
+    }
+
+
+    .ai-conteudo {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .ai-recursos {
+        justify-content: center;
+    }
+
+
+    /* IMAGEM */
+
+    .imagem-projeto {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        margin: 70px auto;
+    }
+
+
+    .imagem-box img {
+        height: 350px;
+    }
+
+
+    /* INSTAGRAM */
+
+    .instagram-card {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 25px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    #simbolo {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    #nametitle h2 {
+        font-size: 24px;
+    }
+
+
+    #nav1 {
+        gap: 5px 13px;
+    }
+
+
+    #nav1 a {
+        font-size: 12px;
+    }
+
+
+    .contato-hero {
+        padding: 55px 20px;
+    }
+
+
+    .hero-conteudo h1 {
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .hero-conteudo p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .hero-botoes {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .btn-principal,
+    .btn-secundario {
+        width: 100%;
+    }
+
+
+    .hero-decoracao {
+        width: 280px;
+        height: 280px;
+    }
+
+
+    .circulo-1 {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .circulo-2 {
+        width: 190px;
+        height: 190px;
+    }
+
+
+    .hero-card {
+        width: 190px;
+        min-height: 205px;
+    }
+
+
+    .hero-card i {
+        width: 60px;
+        height: 60px;
+
+        font-size: 24px;
+    }
+
+
+    /* SOBRE */
+
+    .sobre-nexa {
+        padding: 70px 20px;
+    }
+
+
+    .titulo-secao {
+        margin-bottom: 40px;
+    }
+
+
+    .titulo-secao h2 {
+        font-size: 32px;
+    }
+
+
+    .titulo-secao p {
+        font-size: 14px;
+    }
+
+
+    .cards-sobre {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card-sobre {
+        padding: 25px;
+    }
+
+
+    /* IA */
+
+    .nexa-ai-destaque {
+        margin: 15px;
+
+        padding: 50px 22px;
+    }
+
+
+    .ai-conteudo h2 {
+        font-size: 38px;
+    }
+
+
+    .ai-conteudo > p {
+        font-size: 14px;
+    }
+
+
+    .ai-recursos {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .ai-recursos div {
+        justify-content: center;
+    }
+
+
+    .btn-ai {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .ai-visual {
+        width: 260px;
+        height: 260px;
+    }
+
+
+    .ai-orbita {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .ai-icon {
+        width: 110px;
+        height: 110px;
+
+        font-size: 45px;
+
+        border-radius: 30px;
+    }
+
+
+    .ai-ponto {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    /* IMAGEM */
+
+    .imagem-projeto {
+        padding: 0 20px;
+    }
+
+
+    .imagem-box img {
+        height: 280px;
+    }
+
+
+    .imagem-texto h2 {
+        font-size: 32px;
+    }
+
+
+    /* INSTAGRAM */
+
+    .instagram-section {
+        padding: 10px 20px 70px;
+    }
+
+
+    .instagram-texto h2 {
+        font-size: 23px;
+    }
+
+
+    .instagram-btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    /* FINAL */
+
+    .mensagem-final {
+        padding: 75px 20px;
+    }
+
+
+    .mensagem-conteudo h2 {
+        font-size: 36px;
+    }
+
+
+    .mensagem-conteudo p {
+        font-size: 14px;
     }
 
 
     /* FOOTER */
 
     #rodape {
-        padding:
-            38px
-            15px
-            20px;
+        padding-top: 35px;
     }
+
 
     .rodape-links {
         gap: 15px 20px;
-
-        margin: 25px 0;
     }
 
-    .rodape-links a {
-        font-size: 12px;
-    }
-}
-
-
-/* =========================================================
-   MODO ESCURO
-========================================================= */
-
-body.nexa-escuro {
-    background:
-        radial-gradient(
-            circle at 10% 20%,
-            rgba(100, 60, 120, .25),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #211a26,
-            #29202e
-        );
-
-    color: #eadde9;
-}
-
-
-body.nexa-escuro #top {
-    background:
-        rgba(30, 23, 33, .95);
-
-    border-bottom:
-        1px solid
-        rgba(255,255,255,.08);
-}
-
-body.nexa-escuro #nametitle h2 {
-    color: #f5dceb;
-}
-
-body.nexa-escuro #nav1 a {
-    color: #dfcedd;
-}
-
-body.nexa-escuro .hero-texto-contato > p {
-    color: #d2c2d0;
-}
-
-body.nexa-escuro .titulo-contato h1 {
-    color: #edc9e0;
-}
-
-body.nexa-escuro .titulo-contato h2 {
-    color: #ddcbd9;
-}
-
-body.nexa-escuro .box-contato,
-body.nexa-escuro .foto-contato,
-body.nexa-escuro .instagram-contato {
-    background:
-        rgba(45, 34, 48, .96);
-
-    border-color:
-        rgba(255,255,255,.06);
-}
-
-body.nexa-escuro .titulo-box-contato h2,
-body.nexa-escuro .foto-contato-texto h2,
-body.nexa-escuro .instagram-texto h2,
-body.nexa-escuro .mensagem-texto-contato h3 {
-    color: #efd8e8;
-}
-
-body.nexa-escuro .card-contato {
-    background:
-        linear-gradient(
-            145deg,
-            #36293a,
-            #302633
-        );
-}
-
-body.nexa-escuro .card-contato h3 {
-    color: #edc8e0;
-}
-
-body.nexa-escuro .card-contato p,
-body.nexa-escuro .foto-contato-texto p,
-body.nexa-escuro .instagram-texto p,
-body.nexa-escuro .mensagem-texto-contato p {
-    color: #cfc0cc;
-}
-
-body.nexa-escuro .frase-contato,
-body.nexa-escuro .mensagem-contato {
-    background:
-        linear-gradient(
-            135deg,
-            #38293c,
-            #302938
-        );
-}
-
-body.nexa-escuro .frase-texto h2 {
-    color: #efd5e6;
-}
-
-body.nexa-escuro .frase-texto p {
-    color: #cfc0cc;
 }

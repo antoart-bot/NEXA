@@ -1,138 +1,515 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
     <title>NEXA</title>
 </head>
+
 <body>
-<header id="top">
-<div id="top1">
-    <div>
-        <img id="simbolo" src="img/logo.jpeg" alt="Simbolo IDEPD">
-    </div>
 
-    <div id="nametitle">
-        <h2>NEXA</h2>
-    </div>
+    <!-- ================= HEADER ================= -->
 
-</div>
-<nav id="nav1">
+    <header id="top">
 
-    <a href="index.html">Início</a>
+        <div id="top1">
 
-    <a href="nexa-ai.html">Nexa AI</a>
+            <div>
+                <img id="simbolo"
+                    src="img/logo.jpeg"
+                    alt="Logo NEXA">
+            </div>
 
-    <a href="nexa-3d.html">Nexa 3D</a>
-
-    <a href="comparativos.html">Comparativos</a>
-
-    <a href="mitos-verdades.html">Mitos e Verdades</a>
-
-    <a href="contato.html">Contato</a>
-
-</nav>
-
-</header>
-
-
-<main id="container"> 
-    <div class="container-geral"> 
-
-<div id="partprin">
-
-    <div class="conteudo-topo">
-
-        <div id="parta">
-
-                <div id="titleprin">
-                    <h1>NEXA</h1>
-                </div>
-
-            <div id="txt1">
-                <p>
-                    O NEXA é um projeto educativo voltado para a saúde da mulher. Seu principal objetivo é levar informação de forma simples, acessível e responsável, ajudando as pessoas a conhecerem melhor assuntos importantes relacionados à saúde.
-                </p>
+            <div id="nametitle">
+                <h2>NEXA</h2>
             </div>
 
         </div>
 
-    </div>
+
+        <nav id="nav1">
+
+            <a href="index.html" class="ativo">
+                Início
+            </a>
+
+            <a href="nexa-ai.html">
+                Nexa AI
+            </a>
+
+            <a href="comparativos.html">
+                Comparativos
+            </a>
+
+            <a href="mitos-verdades.html">
+                Mitos e Verdades
+            </a>
+
+            <a href="contato.html">
+                Contato
+            </a>
+
+        </nav>
+
+    </header>
 
 
-    <div class="cards-home">
 
-        <div class="card-home">
-            <h2>Saúde da Mulher</h2>
-            <p>Informações sobre saúde e cuidados importantes.</p>
-            <a href="saude.html">Explorar</a>
+    <!-- ================= CONTEÚDO ================= -->
+
+    <main id="container">
+
+        <div class="container-geral">
+
+            <div id="partprin">
+
+
+                <!-- APRESENTAÇÃO -->
+
+                <div class="conteudo-topo">
+
+                    <div id="parta">
+
+                        <div id="titleprin">
+                            <span class="titulo-tag">
+                                INFORMAÇÃO • CUIDADO • PREVENÇÃO
+                            </span>
+
+                            <h1>NEXA</h1>
+                        </div>
+
+
+                        <div id="txt1">
+
+                            <p>
+                                O NEXA é um projeto educativo voltado
+                                para a saúde da mulher. Seu principal
+                                objetivo é levar informação de forma
+                                simples, acessível e responsável,
+                                ajudando as pessoas a conhecerem melhor
+                                assuntos importantes relacionados à saúde.
+                            </p>
+
+                        </div>
+
+
+                        <div class="botoes-inicio">
+
+                            <a href="#conteudos"
+                                class="btn-explorar">
+
+                                Explorar conteúdos
+
+                                <i class="fa-solid fa-arrow-down"></i>
+
+                            </a>
+
+
+                            <a href="nexa-ai.html"
+                                class="btn-ai-inicio">
+
+                                <i class="fa-solid fa-robot"></i>
+
+                                Conhecer o NEXA IA
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= 6 CARDS ================= -->
+
+                <section id="conteudos"
+                    class="area-conteudos">
+
+                    <div class="titulo-conteudos">
+
+                        <span>EXPLORE O NEXA</span>
+
+                        <h2>
+                            Conheça nossos
+                            <strong>conteúdos</strong>
+                        </h2>
+
+                        <p>
+                            Encontre informações sobre diferentes
+                            assuntos relacionados à saúde e prevenção.
+                        </p>
+
+                    </div>
+
+
+                    <div class="cards-home">
+
+
+                        <!-- CARD 1 -->
+
+                        <div class="card-home">
+
+                            <div class="icone-card">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+
+                            <h2>
+                                Saúde da Mulher
+                            </h2>
+
+                            <p>
+                                Informações sobre saúde e cuidados
+                                importantes para o bem-estar.
+                            </p>
+
+                            <a href="saude.html">
+                                Explorar
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- CARD 2 -->
+
+                        <div class="card-home">
+
+                            <div class="icone-card">
+                                <i class="fa-solid fa-shield-virus"></i>
+                            </div>
+
+                            <h2>
+                                ISTs
+                            </h2>
+
+                            <p>
+                                Entenda melhor as infecções sexualmente
+                                transmissíveis e sua prevenção.
+                            </p>
+
+                            <a href="ist.html">
+                                Explorar
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- CARD 3 -->
+
+                        <div class="card-home">
+
+                            <div class="icone-card">
+                                <i class="fa-solid fa-pills"></i>
+                            </div>
+
+                            <h2>
+                                Anticoncepcionais
+                            </h2>
+
+                            <p>
+                                Orientações sobre diferentes métodos
+                                e seu uso consciente.
+                            </p>
+
+                            <a href="anticoncepcionais.html">
+                                Explorar
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- CARD 4 -->
+
+                        <div class="card-home">
+
+                            <div class="icone-card">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                            </div>
+
+                            <h2>
+                                Prevenção
+                            </h2>
+
+                            <p>
+                                Cuidados e informações importantes
+                                para ajudar na prevenção.
+                            </p>
+
+                            <a href="prevencao.html">
+                                Explorar
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- CARD 5 -->
+
+                        <div class="card-home">
+
+                            <div class="icone-card">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+
+                            <h2>
+                                Informação
+                            </h2>
+
+                            <p>
+                                Conheça informações importantes
+                                relacionadas à saúde.
+                            </p>
+
+                            <a href="informacao.html">
+                                Explorar
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- CARD 6 -->
+
+                        <div class="card-home">
+
+                            <div class="icone-card">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+
+                            <h2>
+                                Orientação
+                            </h2>
+
+                            <p>
+                                Conteúdos para ajudar na busca por
+                                informação e orientação.
+                            </p>
+
+                            <a href="orientacao.html">
+                                Explorar
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ================= NEXA IA ================= -->
+
+                <section class="nexa-ai-home">
+
+                    <div class="ai-home-conteudo">
+
+                        <span class="ai-home-tag">
+
+                            <i class="fa-solid fa-sparkles"></i>
+
+                            TECNOLOGIA NEXA
+
+                        </span>
+
+
+                        <h2>
+                            Ainda ficou com
+                            <strong>dúvidas?</strong>
+                        </h2>
+
+
+                        <p>
+                            Conheça o <strong>NEXA IA</strong>, uma
+                            ferramenta criada para ajudar você a
+                            compreender melhor os assuntos abordados
+                            no projeto.
+                        </p>
+
+
+                        <p>
+                            Faça perguntas, tire dúvidas e continue
+                            aprendendo de uma maneira simples e
+                            interativa.
+                        </p>
+
+
+                        <a href="nexa-ai.html"
+                            class="botao-nexa-ai">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                            Perguntar ao NEXA IA
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- VISUAL DO ROBÔ -->
+
+                    <div class="ai-home-visual">
+
+                        <div class="ai-home-orbita"></div>
+
+                        <div class="ai-home-robo">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+
+                        <div class="ai-bolha bolha-1">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                        </div>
+
+
+                        <div class="ai-bolha bolha-2">
+
+                            <i class="fa-solid fa-comment"></i>
+
+                        </div>
+
+
+                        <div class="ai-bolha bolha-3">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- FRASE FINAL -->
+
+                <section class="frase-home">
+
+                    <i class="fa-solid fa-quote-left"></i>
+
+                    <h2>
+                        Informação também é cuidado.
+                    </h2>
+
+                    <p>
+                        Explore o NEXA e descubra mais sobre saúde,
+                        prevenção e conscientização.
+                    </p>
+
+                </section>
+
+
+            </div>
+
+
+            <div id="linha"></div>
+
         </div>
 
-        <div class="card-home">
-            <h2>ISTs</h2>
-            <p>Entenda melhor essa condição e seus principais aspectos.</p>
-            <a href="ist.html">Explorar</a>
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="rodape">
+
+        <div class="rodape-logo">
+
+            <h2>NEXA</h2>
+
+            <p>
+                Informação também é cuidado.
+            </p>
+
         </div>
 
-        <div class="card-home">
-            <h2>Anticoncepcionais</h2>
-            <p>Orientações sobre o uso correto e consciente.</p>
-            <a href="anticoncepcionais.html">Explorar</a>
+
+        <div class="rodape-links">
+
+            <a href="saude.html">
+                Saúde da Mulher
+            </a>
+
+            <a href="ist.html">
+                ISTs
+            </a>
+
+            <a href="anticoncepcionais.html">
+                Anticoncepcionais
+            </a>
+
+            <a href="prevencao.html">
+                Prevenção
+            </a>
+
+            <a href="informacao.html">
+                Informação
+            </a>
+
+            <a href="orientacao.html">
+                Orientação
+            </a>
+
+            <a href="nexa-ai.html">
+                NEXA IA
+            </a>
+
         </div>
 
-        <div class="card-home">
-            <h2>Prevenção</h2>
-            <p>Cuidados e informações para a prevenção.</p>
-            <a href="prevencao.html">Explorar</a>
+
+        <div class="rodape-social">
+
+            <a href="https://www.instagram.com/202_farmacia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram do NEXA">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
         </div>
 
-        <div class="card-home">
-            <h2>Informação</h2>
-            <p>Conheça informações importantes sobre saúde.</p>
-            <a href="informacao.html">Explorar</a>
+
+        <div class="rodape-copy">
+
+            <p>
+                © 2026 NEXA — Projeto educativo sobre saúde
+            </p>
+
         </div>
 
-        <div class="card-home">
-            <h2>Orientação</h2>
-            <p>Conteúdos para ajudar na busca por orientação.</p>
-            <a href="orientacao.html">Explorar</a>
-        </div>
+    </footer>
 
-    </div>
 
-</div> 
- 
-        <div id="linha"></div> 
+    <script src="script.js"></script>
 
-    </div> 
-</main>
-<footer id="rodape">
-
-    <div class="rodape-logo">
-        <h2>NEXA</h2>
-        <p>Informação também é cuidado.</p>
-    </div>
-
-    <div class="rodape-links">
-        <a href="saude.html">Saúde da Mulher</a>
-        <a href="ist.html">ISts</a>
-        <a href="anticoncepcionais.html">Anticoncepcionais</a>
-        <a href="prevencao.html">Prevenção</a>
-        <a href="orientacao.html">Orientação</a>
-    </div>
-
-    <div class="rodape-copy">
-        <p>© 2026 NEXA — Projeto educativo sobre saúde</p>
-    </div>
-
-</footer>
-
- <script src="script.js"></script>
 </body>
+
 </html>

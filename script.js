@@ -371,48 +371,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* =====================================================
-       BOTÃO VOLTAR AO TOPO
-       ===================================================== */
-
-    const topo =
-        document.createElement("button");
-
-    topo.id = "nexa-topo";
-
-    topo.innerHTML = "↑";
-
-    topo.setAttribute(
-        "aria-label",
-        "Voltar ao topo"
-    );
-
-    document.body.appendChild(topo);
-
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 400) {
-
-            topo.classList.add("mostrar");
-
-        } else {
-
-            topo.classList.remove("mostrar");
-
-        }
-
-    });
-
-
-    topo.addEventListener("click", () => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
 
 
 

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>NEXA — Mitos e Verdades</title>
+
+    <link rel="stylesheet" href="mitos-verdades.css">
+</head>
+
+<body>
+
+<header id="top">
+
+    <div id="top1">
+
+        <div>
+            <img id="simbolo" src="img/logo.jpeg" alt="Logo NEXA">
+        </div>
+
+        <div id="nametitle">
+            <h2>NEXA</h2>
+        </div>
+
+    </div>
+
+    <nav id="nav1">
+
+        <a href="index.html">Início</a>
+
+        <a href="nexa-ai.html">Nexa AI</a>
+
+        <a href="nexa-3d.html">Nexa 3D</a>
+
+        <a href="comparativos.html">Comparativos</a>
+
+        <a class="ativo" href="mitos-verdades.html">
+            Mitos e Verdades
+        </a>
+
+        <a href="contato.html">Contato</a>
+
+    </nav>
+
+</header>
+
+
+<main class="pagina">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="etiqueta">
+            <i class="fa-solid fa-circle-question"></i>
+            MITOS E VERDADES
+        </div>
+
+        <h1>
+            Será que é <span>verdade?</span>
+        </h1>
+
+        <h2>
+            Descubra o que é mito e o que é verdade sobre saúde.
+        </h2>
+
+        <p>
+            Existem muitas informações sobre saúde que circulam pela
+            internet e pelas redes sociais. Aqui você pode conferir
+            algumas afirmações comuns e entender melhor o que realmente
+            se sabe sobre cada uma delas.
+        </p>
+
+    </section>
+
+
+    <!-- MITOS E VERDADES -->
+
+    <section class="mitos-container">
+
+        <div class="titulo-secao">
+
+            <span></span>
+
+            <div>
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>20 afirmações para testar seus conhecimentos</h3>
+            </div>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="cards-mitos">
+
+
+            <!-- 01 -->
+
+            <article class="mito-card">
+
+                <div class="numero">01</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-pills"></i>
+                </div>
+
+                <h4>
+                    A pílula anticoncepcional protege contra ISTs?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        A pílula anticoncepcional ajuda a prevenir a gravidez,
+                        mas não protege contra infecções sexualmente
+                        transmissíveis. O preservativo é importante para
+                        reduzir o risco de várias ISTs.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 02 -->
+
+            <article class="mito-card">
+
+                <div class="numero">02</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <h4>
+                    O preservativo ajuda a prevenir algumas ISTs?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        O uso correto do preservativo reduz o risco de
+                        transmissão de diversas ISTs. Ele não elimina
+                        completamente todos os riscos.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 03 -->
+
+            <article class="mito-card">
+
+                <div class="numero">03</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+
+                <h4>
+                    É impossível engravidar durante a menstruação?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        A possibilidade pode ser menor em alguns momentos,
+                        mas não é correto considerar a menstruação como uma
+                        forma segura de evitar a gravidez.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 04 -->
+
+            <article class="mito-card">
+
+                <div class="numero">04</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <h4>
+                    A endometriose pode causar dor intensa?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        A endometriose pode estar associada a dores
+                        pélvicas, cólicas menstruais intensas e outros
+                        sintomas. A avaliação profissional é importante.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 05 -->
+
+            <article class="mito-card">
+
+                <div class="numero">05</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+
+                <h4>
+                    Toda alteração no ciclo menstrual significa uma doença?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        Alterações no ciclo podem acontecer por diversos
+                        motivos. Porém, mudanças persistentes ou preocupantes
+                        devem ser avaliadas por um profissional de saúde.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 06 -->
+
+            <article class="mito-card">
+
+                <div class="numero">06</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+
+                <h4>
+                    Apenas adultos devem buscar informações sobre saúde sexual?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        Informação adequada à idade ajuda adolescentes e
+                        jovens a conhecerem prevenção, cuidados e quando
+                        procurar orientação profissional.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 07 -->
+
+            <article class="mito-card">
+
+                <div class="numero">07</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-syringe"></i>
+                </div>
+
+                <h4>
+                    Todo método anticoncepcional funciona da mesma maneira?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        Os métodos possuem mecanismos, formas de uso,
+                        duração e características diferentes.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 08 -->
+
+            <article class="mito-card">
+
+                <div class="numero">08</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <h4>
+                    O DIU pode ser um método contraceptivo de longa duração?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        Existem DIUs que oferecem contracepção por vários
+                        anos, dependendo do tipo e do produto utilizado.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 09 -->
+
+            <article class="mito-card">
+
+                <div class="numero">09</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-ban"></i>
+                </div>
+
+                <h4>
+                    Anticoncepcional deve ser usado sem orientação?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        A escolha e o uso de métodos hormonais devem considerar
+                        as características de cada pessoa e orientação de um
+                        profissional de saúde.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 10 -->
+
+            <article class="mito-card">
+
+                <div class="numero">10</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-virus"></i>
+                </div>
+
+                <h4>
+                    Uma pessoa pode ter uma IST sem apresentar sintomas?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        Algumas ISTs podem não apresentar sintomas evidentes.
+                        Por isso, prevenção, testagem quando indicada e
+                        acompanhamento são importantes.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 11 -->
+
+            <article class="mito-card">
+
+                <div class="numero">11</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-person"></i>
+                </div>
+
+                <h4>
+                    ISTs só podem ser transmitidas por pessoas que parecem doentes?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        Uma pessoa pode transmitir uma IST mesmo sem apresentar
+                        sinais visíveis.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 12 -->
+
+            <article class="mito-card">
+
+                <div class="numero">12</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h4>
+                    Conhecer o próprio corpo pode ajudar nos cuidados com a saúde?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        Conhecer o próprio corpo e perceber mudanças pode
+                        facilitar a busca por orientação quando algo diferente
+                        acontece.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 13 -->
+
+            <article class="mito-card">
+
+                <div class="numero">13</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <h4>
+                    Esquecer doses de alguns anticoncepcionais pode afetar sua eficácia?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        Para métodos que dependem de uso regular, esquecer
+                        doses pode diminuir a proteção. A orientação depende
+                        do método utilizado.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 14 -->
+
+            <article class="mito-card">
+
+                <div class="numero">14</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-mars-and-venus"></i>
+                </div>
+
+                <h4>
+                    Anticoncepcionais protegem contra todas as ISTs?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        Métodos anticoncepcionais têm como principal objetivo
+                        prevenir a gravidez. Eles não substituem o preservativo
+                        na prevenção de ISTs.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 15 -->
+
+            <article class="mito-card">
+
+                <div class="numero">15</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-stethoscope"></i>
+                </div>
+
+                <h4>
+                    Procurar um profissional pode ajudar a esclarecer dúvidas de saúde?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        Profissionais de saúde podem orientar sobre prevenção,
+                        sintomas, exames e opções de cuidado.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 16 -->
+
+            <article class="mito-card">
+
+                <div class="numero">16</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <h4>
+                    Toda dor menstrual forte deve ser simplesmente ignorada?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        Dor menstrual que é muito intensa, persistente ou
+                        interfere nas atividades pode merecer avaliação
+                        profissional.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 17 -->
+
+            <article class="mito-card">
+
+                <div class="numero">17</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h4>
+                    Usar corretamente um método ajuda a aumentar sua eficácia?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        O uso correto e consistente é importante para que
+                        muitos métodos funcionem da maneira esperada.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 18 -->
+
+            <article class="mito-card">
+
+                <div class="numero">18</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <h4>
+                    Pesquisar informações na internet sempre é suficiente para diagnosticar uma doença?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="mito">MITO</strong>
+
+                    <p>
+                        Informações online podem ajudar na educação em saúde,
+                        mas não substituem avaliação e diagnóstico realizados
+                        por profissionais.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 19 -->
+
+            <article class="mito-card">
+
+                <div class="numero">19</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+
+                <h4>
+                    Falar sobre saúde pode ajudar a combater informações falsas?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        Conversar sobre saúde usando fontes confiáveis pode
+                        ajudar a identificar e combater informações incorretas.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- 20 -->
+
+            <article class="mito-card destaque">
+
+                <div class="numero">20</div>
+
+                <div class="icone">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+
+                <h4>
+                    A Nexa AI pode ajudar a explicar dúvidas sobre saúde?
+                </h4>
+
+                <button onclick="mostrarResposta(this)">
+                    Ver resposta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="resposta">
+                    <strong class="verdade">VERDADE</strong>
+
+                    <p>
+                        A Nexa AI pode ajudar a explicar informações
+                        educativas de forma simples. Ela não substitui um
+                        profissional de saúde.
+                    </p>
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA PARA IA -->
+
+    <section class="cta-ai">
+
+        <div class="cta-icone">
+            <i class="fa-solid fa-robot"></i>
+        </div>
+
+        <div class="cta-texto">
+
+            <span>AINDA TEM DÚVIDA?</span>
+
+            <h2>
+                Quer saber mais sobre algum assunto?
+            </h2>
+
+            <p>
+                Pergunte para a Nexa AI e receba uma explicação
+                simples e educativa sobre o tema.
+            </p>
+
+        </div>
+
+        <a href="nexa-ai.html" class="btn-ai">
+            Perguntar para a Nexa AI
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer id="rodape">
+
+    <div class="rodape-logo">
+
+        <h2>NEXA</h2>
+
+        <p>
+            Informação também é cuidado.
+        </p>
+
+    </div>
+
+    <div class="rodape-links">
+
+        <a href="saude.html">Saúde da Mulher</a>
+
+        <a href="ist.html">ISTs</a>
+
+        <a href="anticoncepcionais.html">Anticoncepcionais</a>
+
+        <a href="prevencao.html">Prevenção</a>
+
+        <a href="nexa-ai.html">Nexa AI</a>
+
+    </div>
+
+    <div class="rodape-copy">
+
+        <p>
+            © 2026 NEXA — Projeto educativo sobre saúde
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function mostrarResposta(botao) {
+
+    const card = botao.closest(".mito-card");
+
+    card.classList.toggle("aberto");
+
+    if (card.classList.contains("aberto")) {
+
+        botao.innerHTML =
+            'Esconder resposta <i class="fa-solid fa-chevron-up"></i>';
+
+    } else {
+
+        botao.innerHTML =
+            'Ver resposta <i class="fa-solid fa-arrow-right"></i>';
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

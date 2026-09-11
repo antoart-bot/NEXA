@@ -26,38 +26,37 @@ html{
     scroll-behavior: smooth;
 }
 
+/* =========================
+   HEADER NEXA
+========================= */
+
 #top {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 9px 50px;
+    padding: 8px 50px;
 
-    background: rgba(242, 213, 243, 0.90);
+    background: rgba(239, 215, 243, 0.95);
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    border-bottom: 1px solid rgba(117, 55, 155, 0.08);
+    border-bottom: 1px solid rgba(91, 42, 137, 0.10);
 
     position: sticky;
     top: 0;
-
     z-index: 1000;
 }
 
-
-/* LOGO */
+/* LOGO + NEXA */
 
 #top1 {
     display: flex;
     align-items: center;
-
     gap: 12px;
 }
-
 
 #simbolo {
     width: 58px;
@@ -65,21 +64,18 @@ html{
 
     object-fit: contain;
 
-    border-radius: 9px;
+    border-radius: 8px;
 
-    transition: .3s ease;
+    transition: 0.3s ease;
 
-    filter:
-        drop-shadow(
-            0 5px 12px rgba(91, 43, 145, .16)
-        );
+    filter: drop-shadow(
+        0 5px 12px rgba(80, 35, 130, 0.15)
+    );
 }
-
 
 #simbolo:hover {
     transform: scale(1.05);
 }
-
 
 #nametitle h2 {
     margin: 0;
@@ -87,6 +83,7 @@ html{
     font-family: 'Poppins', sans-serif;
 
     font-size: 27px;
+
     font-weight: 700;
 
     letter-spacing: 1px;
@@ -95,35 +92,35 @@ html{
 }
 
 
-/* =====================================================
+/* =========================
    MENU
-===================================================== */
+========================= */
 
 #nav1 {
     display: flex;
     align-items: center;
-
     gap: 28px;
 }
-
 
 #nav1 a {
     position: relative;
 
     padding: 8px 0;
 
-    color: #6a287f;
+    color: #672778;
 
     text-decoration: none;
 
     font-family: 'Inter', sans-serif;
 
     font-size: 15px;
+
     font-weight: 600;
 
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
+/* LINHA ANIMADA */
 
 #nav1 a::after {
     content: "";
@@ -142,23 +139,20 @@ html{
 
     background: linear-gradient(
         90deg,
-        #e45db5,
-        #7940bd
+        #e45cae,
+        #7840bd
     );
 
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
-
 
 #nav1 a:hover {
-    color: #48177e;
+    color: #46177b;
 }
-
 
 #nav1 a:hover::after {
     width: 100%;
 }
-
 
 #container{
     min-height: 100vh;
@@ -278,15 +272,6 @@ html{
 
 .card-home a:hover {
     transform: scale(1.05);
-}
-
-.ativo{
-    color: var(--verde) !important;
-}
-
-
-.ativo::after{
-    width: 100% !important;
 }
 
 #titleprin{
@@ -1779,3 +1764,728 @@ p, a, li, button, input, textarea {
 
 }
 
+/* ================================
+   MENU NEXA - ANIMAÇÃO
+================================ */
+
+#nav1 {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+#nav1 > a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 0;
+    color: #672778;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* LINHA */
+#nav1 > a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #e45cae,
+        #7840bd
+    );
+
+    border-radius: 20px;
+
+    transform: translateX(-50%);
+
+    transition:
+        width 0.35s ease,
+        left 0.35s ease;
+}
+
+/* MOUSE EM CIMA */
+#nav1 > a:hover {
+    color: #46177b;
+}
+
+#nav1 > a:hover::after {
+    width: 100%;
+}
+
+/* PÁGINA ATUAL */
+#nav1 > a.ativo {
+    color: #46177b;
+}
+
+#nav1 > a.ativo::after {
+    width: 100%;
+}
+
+/* =====================================================
+   NEXA IA - DESTAQUE DA HOME
+===================================================== */
+
+.nexa-ai-home {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 80px auto;
+
+    padding: 65px 70px;
+
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 35px;
+
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(228, 92, 174, 0.35),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(155, 107, 209, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #35134f,
+            #6326a4,
+            #873fae
+        );
+
+    box-shadow:
+        0 25px 60px rgba(70, 23, 123, 0.22);
+}
+
+
+.ai-home-conteudo {
+    max-width: 620px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.ai-home-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 16px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50px;
+
+    color: #f8d9f2;
+
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.ai-home-conteudo h2 {
+    margin-bottom: 20px;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.1;
+}
+
+
+.ai-home-conteudo h2 strong {
+    background: linear-gradient(
+        90deg,
+        #f39bce,
+        #d7a8ff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.ai-home-conteudo p {
+    margin-bottom: 12px;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+.ai-home-conteudo p strong {
+    color: white;
+}
+
+
+.botao-nexa-ai {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-top: 20px;
+
+    padding: 15px 23px;
+
+    border-radius: 14px;
+
+    color: #46177b;
+
+    background: white;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.20);
+
+    transition: 0.3s ease;
+}
+
+
+.botao-nexa-ai:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 35px rgba(0,0,0,0.28);
+}
+
+
+.botao-nexa-ai i:last-child {
+    transition: 0.3s ease;
+}
+
+
+.botao-nexa-ai:hover i:last-child {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   VISUAL DO NEXA IA
+===================================================== */
+
+.ai-home-visual {
+    width: 310px;
+    height: 310px;
+
+    flex-shrink: 0;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ai-home-orbita {
+    width: 270px;
+    height: 270px;
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    animation: nexaGiro 14s linear infinite;
+}
+
+
+.ai-home-orbita::before {
+    content: "";
+
+    width: 13px;
+    height: 13px;
+
+    position: absolute;
+
+    top: 15px;
+    left: 50%;
+
+    border-radius: 50%;
+
+    background: #f39bce;
+
+    box-shadow: 0 0 20px #f39bce;
+}
+
+
+.ai-home-robo {
+    width: 140px;
+    height: 140px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 5;
+
+    border-radius: 38px;
+
+    color: white;
+
+    font-size: 55px;
+
+    background: rgba(255,255,255,0.13);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25),
+        inset 0 0 25px rgba(255,255,255,0.08);
+
+    animation: nexaFlutuar 4s ease-in-out infinite;
+}
+
+
+.ai-bolha {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    z-index: 7;
+
+    border-radius: 15px;
+
+    color: white;
+
+    background: rgba(255,255,255,0.13);
+
+    border: 1px solid rgba(255,255,255,0.20);
+
+    backdrop-filter: blur(10px);
+
+    animation: nexaFlutuar 3s ease-in-out infinite;
+}
+
+
+.bolha-1 {
+    top: 15px;
+    left: 25px;
+}
+
+
+.bolha-2 {
+    top: 100px;
+    right: 0;
+
+    animation-delay: 0.6s;
+}
+
+
+.bolha-3 {
+    bottom: 15px;
+    left: 50px;
+
+    animation-delay: 1s;
+}
+
+
+/* =====================================================
+   FRASE FINAL
+===================================================== */
+
+.frase-home {
+    max-width: 800px;
+
+    margin: 90px auto;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+
+.frase-home > i {
+    font-size: 28px;
+
+    color: #e45cae;
+
+    margin-bottom: 15px;
+}
+
+
+.frase-home h2 {
+    margin-bottom: 12px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    color: #46177b;
+}
+
+
+.frase-home p {
+    color: #6b6470;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   TAG DO TÍTULO
+===================================================== */
+
+.titulo-tag {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #e45cae;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   BOTÕES DA HOME
+===================================================== */
+
+.botoes-inicio {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.btn-explorar,
+.btn-ai-inicio {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 13px 20px;
+
+    border-radius: 13px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.btn-explorar {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #7840bd,
+        #a45bd0
+    );
+}
+
+
+.btn-ai-inicio {
+    color: #6326a4;
+
+    background: rgba(255,255,255,0.75);
+
+    border: 1px solid rgba(120,64,189,0.15);
+}
+
+
+.btn-explorar:hover,
+.btn-ai-inicio:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(80,35,130,0.18);
+}
+
+
+/* =====================================================
+   TÍTULO DOS CONTEÚDOS
+===================================================== */
+
+.titulo-conteudos {
+    max-width: 650px;
+
+    margin: 90px auto 50px;
+
+    text-align: center;
+}
+
+
+.titulo-conteudos > span {
+    color: #e45cae;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.titulo-conteudos h2 {
+    margin: 12px 0;
+
+    color: #46177b;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(30px, 4vw, 44px);
+}
+
+
+.titulo-conteudos h2 strong {
+    color: #7840bd;
+}
+
+
+.titulo-conteudos p {
+    color: #6b6470;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   ÍCONES DOS CARDS
+===================================================== */
+
+.icone-card {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 17px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #e45cae,
+        #7840bd
+    );
+
+    font-size: 21px;
+
+    box-shadow:
+        0 8px 20px rgba(120,64,189,0.20);
+
+    transition: 0.3s ease;
+}
+
+
+.card-home:hover .icone-card {
+    transform: rotate(-5deg) scale(1.08);
+}
+
+
+.card-home a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.card-home a i {
+    transition: 0.3s ease;
+}
+
+
+.card-home:hover a i {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+@keyframes nexaFlutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+@keyframes nexaGiro {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .nexa-ai-home {
+        width: 92%;
+
+        padding: 50px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .ai-home-conteudo {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .ai-home-visual {
+        width: 270px;
+        height: 270px;
+    }
+
+
+    .ai-home-orbita {
+        width: 230px;
+        height: 230px;
+    }
+
+
+    .ai-home-robo {
+        width: 115px;
+        height: 115px;
+
+        font-size: 45px;
+    }
+
+
+    .botoes-inicio {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .nexa-ai-home {
+        margin: 60px auto;
+
+        border-radius: 27px;
+    }
+
+
+    .ai-home-conteudo h2 {
+        font-size: 36px;
+    }
+
+
+    .ai-home-conteudo p {
+        font-size: 14px;
+    }
+
+
+    .botao-nexa-ai {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .btn-explorar,
+    .btn-ai-inicio {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .ai-home-visual {
+        transform: scale(0.9);
+    }
+
+}
