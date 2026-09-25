@@ -1,126 +1,544 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
+    <link rel="icon" href="favicon.ico">
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Barbearia</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
-    <title>NEXA</title>
+    <link
+        rel="stylesheet"
+        href="agendamento.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- ======================================== -->
+    <!-- HEADER -->
+    <!-- ======================================== -->
 
-    <header id="top">
+    <header>
 
-        <div id="top1">
+        <div class="nav-wrapper">
 
-            <div>
-                <img id="simbolo"
-                    src="img/logo.jpeg"
-                    alt="Logo NEXA">
-            </div>
+            <a
+                href="#"
+                class="logo"
+                id="logoBarbearia"
+            >
+                Barbearia
+            </a>
 
-            <div id="nametitle">
-                <h2>NEXA</h2>
-            </div>
+            <nav>
+
+                <a href="#servicos">
+                    Serviços
+                </a>
+
+                <a href="#sobre">
+                    A barbearia
+                </a>
+
+                <a href="#contato">
+                    Contato
+                </a>
+
+            </nav>
+
+            <a
+                href="#agendamento"
+                class="book"
+            >
+                Agendar
+                <span>↗</span>
+            </a>
 
         </div>
-
-
-        <nav id="nav1">
-
-            <a href="index.html" class="ativo">
-                Início
-            </a>
-
-            <a href="nexa-ai.html">
-                Nexa AI
-            </a>
-
-            <a href="comparativos.html">
-                Comparativos
-            </a>
-
-            <a href="mitos-verdades.html">
-                Mitos e Verdades
-            </a>
-
-            <a href="contato.html">
-                Contato
-            </a>
-
-        </nav>
 
     </header>
 
 
+    <!-- ======================================== -->
+    <!-- HERO -->
+    <!-- ======================================== -->
 
-    <!-- ================= CONTEÚDO ================= -->
+    <main>
 
-    <main id="container">
+        <section class="hero">
 
-        <div class="container-geral">
+            <div class="hero-image"></div>
 
-            <div id="partprin">
+            <div class="hero-gradient"></div>
+
+            <div class="hero-top">
+
+                <span id="cidadeHero">
+                    Cidade
+                </span>
+
+                <span id="anoHero">
+                    EST. 2026
+                </span>
+
+            </div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    BARBEARIA & ESTILO
+                </p>
+
+                <h1>
+                    Corte.
+                    <br>
+                    <span>Presença.</span>
+                </h1>
+
+                <div class="hero-description">
+
+                    <p>
+                        Um espaço para quem entende que
+                        aparência também é identidade.
+                    </p>
+
+                    <a
+                        href="#servicos"
+                        class="circle-button"
+                    >
+                        <span>↓</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
-                <!-- APRESENTAÇÃO -->
+        <!-- ======================================== -->
+        <!-- INTRO -->
+        <!-- ======================================== -->
 
-                <div class="conteudo-topo">
+        <section class="intro">
 
-                    <div id="parta">
+            <div class="intro-number">
+                01
+            </div>
 
-                        <div id="titleprin">
-                            <span class="titulo-tag">
-                                INFORMAÇÃO • CUIDADO • PREVENÇÃO
+            <div class="intro-content">
+
+                <p class="label">
+                    MAIS QUE UM CORTE
+                </p>
+
+                <h2>
+                    Seu visual não precisa
+                    <span>seguir o padrão.</span>
+                </h2>
+
+                <p class="intro-text">
+
+                    Na
+                    <span id="nomeIntro">
+                        Barbearia
+                    </span>,
+                    cada atendimento começa entendendo você.
+                    Seu estilo, seu cabelo, sua rotina e aquilo
+                    que você quer transmitir.
+
+                </p>
+
+                <a
+                    href="#sobre"
+                    class="line-link"
+                >
+                    Conheça a
+                    <span id="nomeIntroLink">
+                        barbearia
+                    </span>
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================== -->
+        <!-- SERVIÇOS -->
+        <!-- ======================================== -->
+
+        <section
+            id="servicos"
+            class="services"
+        >
+
+            <div class="section-top">
+
+                <span class="label">
+                    02 / SERVIÇOS
+                </span>
+
+                <p>
+                    Serviços simples.
+                    <br>
+                    Execução precisa.
+                </p>
+
+            </div>
+
+            <!--
+                Os serviços são gerados automaticamente
+                pelo config-site.js usando CONFIG.servicos.
+            -->
+
+            <div class="service-list"></div>
+
+        </section>
+
+
+        <!-- ======================================== -->
+        <!-- SOBRE -->
+        <!-- ======================================== -->
+
+        <section
+            id="sobre"
+            class="about"
+        >
+
+            <div class="about-image"></div>
+
+            <div class="about-content">
+
+                <span class="label">
+                    03 / A BARBEARIA
+                </span>
+
+                <h2>
+                    O clássico,
+                    <br>
+                    <i>sem ser antigo.</i>
+                </h2>
+
+                <p>
+                    Criamos um ambiente onde o cuidado com o
+                    visual encontra uma experiência tranquila.
+                    Sem pressa. Sem exageros.
+                </p>
+
+                <p>
+                    Técnicas tradicionais, referências atuais
+                    e atenção aos detalhes.
+                </p>
+
+                <div
+                    class="about-signature"
+                    id="assinaturaBarbearia"
+                >
+                    BARBEARIA
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================== -->
+        <!-- CTA / CONTATO -->
+        <!-- ======================================== -->
+
+        <section
+            id="contato"
+            class="contact"
+        >
+
+            <div class="contact-number">
+                04
+            </div>
+
+            <div class="contact-content">
+
+                <span class="label">
+                    SEU PRÓXIMO CORTE
+                </span>
+
+                <h2>
+                    Vamos marcar?
+                </h2>
+
+                <button
+                    class="big-button"
+                    id="abrirAgendamento"
+                >
+
+                    <span>
+                        Agendar horário
+                    </span>
+
+                    <strong>
+                        ↗
+                    </strong>
+
+                </button>
+
+            </div>
+
+            <div class="contact-info">
+
+                <div>
+
+                    <span>
+                        HORÁRIO
+                    </span>
+
+                    <p></p>
+
+                    <p></p>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        LOCAL
+                    </span>
+
+                    <p></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================== -->
+        <!-- AGENDAMENTO -->
+        <!-- ======================================== -->
+
+        <section
+            class="booking"
+            id="agendamento"
+        >
+
+            <div class="booking-heading">
+
+                <div>
+
+                    <span class="label">
+                        05 / AGENDAMENTO
+                    </span>
+
+                    <h2>
+                        Seu próximo corte
+                        <br>
+                        <span>começa aqui.</span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    Escolha o serviço, informe seus dados
+                    e encontre um horário disponível.
+                </p>
+
+            </div>
+
+
+            <div class="booking-card">
+
+
+                <!-- ======================================== -->
+                <!-- DADOS DO CLIENTE -->
+                <!-- ======================================== -->
+
+                <div class="booking-side">
+
+                    <div class="booking-side-header">
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+
+                            <small>
+                                SEUS DADOS
+                            </small>
+
+                            <h3>
+                                Quem está agendando?
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="booking-form">
+
+                        <label>
+
+                            <span>
+                                Seu nome
                             </span>
 
-                            <h1>NEXA</h1>
+                            <div class="input-wrap">
+
+                                <input
+                                    type="text"
+                                    id="nomeCliente"
+                                    placeholder="Digite seu nome"
+                                    autocomplete="name"
+                                >
+
+                            </div>
+
+                        </label>
+
+
+                        <label>
+
+                            <span>
+                                WhatsApp
+                            </span>
+
+                            <div class="input-wrap">
+
+                                <input
+                                    type="tel"
+                                    id="telefoneCliente"
+                                    placeholder="(99) 99999-9999"
+                                    autocomplete="tel"
+                                >
+
+                            </div>
+
+                        </label>
+
+
+                        <label>
+
+                            <span>
+                                Serviço
+                            </span>
+
+                            <div class="input-wrap select-wrap">
+
+                                <select id="servicoCliente">
+
+                                    <option value="">
+                                        Escolha um serviço
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ======================================== -->
+                <!-- HORÁRIO -->
+                <!-- ======================================== -->
+
+                <div class="booking-side booking-time">
+
+                    <div class="booking-side-header">
+
+                        <span>
+                            02
+                        </span>
+
+                        <div>
+
+                            <small>
+                                HORÁRIO
+                            </small>
+
+                            <h3>
+                                Quando você vem?
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="date-label">
+
+                        <span>
+                            Escolha uma data
+                        </span>
+
+                        <div class="input-wrap date-wrap">
+
+                            <input
+                                type="date"
+                                id="dataCliente"
+                            >
+
+                        </div>
+
+                    </label>
+
+
+                    <div class="horarios-box">
+
+                        <div class="horarios-header">
+
+                            <span>
+                                Horários disponíveis
+                            </span>
+
+                            <span class="status-dot">
+                                Disponível
+                            </span>
+
                         </div>
 
 
-                        <div id="txt1">
+                        <div id="listaHorarios">
 
-                            <p>
-                                O NEXA é um projeto educativo voltado
-                                para a saúde da mulher. Seu principal
-                                objetivo é levar informação de forma
-                                simples, acessível e responsável,
-                                ajudando as pessoas a conhecerem melhor
-                                assuntos importantes relacionados à saúde.
-                            </p>
-
-                        </div>
-
-
-                        <div class="botoes-inicio">
-
-                            <a href="#conteudos"
-                                class="btn-explorar">
-
-                                Explorar conteúdos
-
-                                <i class="fa-solid fa-arrow-down"></i>
-
-                            </a>
-
-
-                            <a href="nexa-ai.html"
-                                class="btn-ai-inicio">
-
-                                <i class="fa-solid fa-robot"></i>
-
-                                Conhecer o NEXA IA
-
-                            </a>
+                            <span class="loading-hours">
+                                Carregando horários...
+                            </span>
 
                         </div>
 
@@ -128,387 +546,126 @@
 
                 </div>
 
+            </div>
 
 
-                <!-- ================= 6 CARDS ================= -->
+            <!-- ======================================== -->
+            <!-- CONFIRMAÇÃO -->
+            <!-- ======================================== -->
 
-                <section id="conteudos"
-                    class="area-conteudos">
+            <div class="booking-bottom">
 
-                    <div class="titulo-conteudos">
+                <div class="booking-note">
 
-                        <span>EXPLORE O NEXA</span>
-
-                        <h2>
-                            Conheça nossos
-                            <strong>conteúdos</strong>
-                        </h2>
-
-                        <p>
-                            Encontre informações sobre diferentes
-                            assuntos relacionados à saúde e prevenção.
-                        </p>
-
-                    </div>
-
-
-                    <div class="cards-home">
-
-
-                        <!-- CARD 1 -->
-
-                        <div class="card-home">
-
-                            <div class="icone-card">
-                                <i class="fa-solid fa-heart-pulse"></i>
-                            </div>
-
-                            <h2>
-                                Saúde da Mulher
-                            </h2>
-
-                            <p>
-                                Informações sobre saúde e cuidados
-                                importantes para o bem-estar.
-                            </p>
-
-                            <a href="saude.html">
-                                Explorar
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-
-
-                        <!-- CARD 2 -->
-
-                        <div class="card-home">
-
-                            <div class="icone-card">
-                                <i class="fa-solid fa-shield-virus"></i>
-                            </div>
-
-                            <h2>
-                                ISTs
-                            </h2>
-
-                            <p>
-                                Entenda melhor as infecções sexualmente
-                                transmissíveis e sua prevenção.
-                            </p>
-
-                            <a href="ist.html">
-                                Explorar
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-
-
-                        <!-- CARD 3 -->
-
-                        <div class="card-home">
-
-                            <div class="icone-card">
-                                <i class="fa-solid fa-pills"></i>
-                            </div>
-
-                            <h2>
-                                Anticoncepcionais
-                            </h2>
-
-                            <p>
-                                Orientações sobre diferentes métodos
-                                e seu uso consciente.
-                            </p>
-
-                            <a href="anticoncepcionais.html">
-                                Explorar
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-
-
-                        <!-- CARD 4 -->
-
-                        <div class="card-home">
-
-                            <div class="icone-card">
-                                <i class="fa-solid fa-hand-holding-heart"></i>
-                            </div>
-
-                            <h2>
-                                Prevenção
-                            </h2>
-
-                            <p>
-                                Cuidados e informações importantes
-                                para ajudar na prevenção.
-                            </p>
-
-                            <a href="prevencao.html">
-                                Explorar
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-
-
-                        <!-- CARD 5 -->
-
-                        <div class="card-home">
-
-                            <div class="icone-card">
-                                <i class="fa-solid fa-book-open"></i>
-                            </div>
-
-                            <h2>
-                                Informação
-                            </h2>
-
-                            <p>
-                                Conheça informações importantes
-                                relacionadas à saúde.
-                            </p>
-
-                            <a href="informacao.html">
-                                Explorar
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
-
-
-                        <!-- CARD 6 -->
-
-                        <div class="card-home">
-
-                            <div class="icone-card">
-                                <i class="fa-solid fa-comments"></i>
-                            </div>
-
-                            <h2>
-                                Orientação
-                            </h2>
-
-                            <p>
-                                Conteúdos para ajudar na busca por
-                                informação e orientação.
-                            </p>
-
-                            <a href="orientacao.html">
-                                Explorar
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-
-                    </div>
-
-                </section>
-
-
-
-                <!-- ================= NEXA IA ================= -->
-
-                <section class="nexa-ai-home">
-
-                    <div class="ai-home-conteudo">
-
-                        <span class="ai-home-tag">
-
-                            <i class="fa-solid fa-sparkles"></i>
-
-                            TECNOLOGIA NEXA
-
-                        </span>
-
-
-                        <h2>
-                            Ainda ficou com
-                            <strong>dúvidas?</strong>
-                        </h2>
-
-
-                        <p>
-                            Conheça o <strong>NEXA IA</strong>, uma
-                            ferramenta criada para ajudar você a
-                            compreender melhor os assuntos abordados
-                            no projeto.
-                        </p>
-
-
-                        <p>
-                            Faça perguntas, tire dúvidas e continue
-                            aprendendo de uma maneira simples e
-                            interativa.
-                        </p>
-
-
-                        <a href="nexa-ai.html"
-                            class="botao-nexa-ai">
-
-                            <i class="fa-solid fa-robot"></i>
-
-                            Perguntar ao NEXA IA
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
-
-                    <!-- VISUAL DO ROBÔ -->
-
-                    <div class="ai-home-visual">
-
-                        <div class="ai-home-orbita"></div>
-
-                        <div class="ai-home-robo">
-
-                            <i class="fa-solid fa-robot"></i>
-
-                        </div>
-
-
-                        <div class="ai-bolha bolha-1">
-
-                            <i class="fa-solid fa-heart-pulse"></i>
-
-                        </div>
-
-
-                        <div class="ai-bolha bolha-2">
-
-                            <i class="fa-solid fa-comment"></i>
-
-                        </div>
-
-
-                        <div class="ai-bolha bolha-3">
-
-                            <i class="fa-solid fa-lightbulb"></i>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-
-                <!-- FRASE FINAL -->
-
-                <section class="frase-home">
-
-                    <i class="fa-solid fa-quote-left"></i>
-
-                    <h2>
-                        Informação também é cuidado.
-                    </h2>
+                    <span>
+                        ✓
+                    </span>
 
                     <p>
-                        Explore o NEXA e descubra mais sobre saúde,
-                        prevenção e conscientização.
+                        Seu horário será reservado após
+                        a confirmação do agendamento.
                     </p>
 
-                </section>
+                </div>
 
+
+                <button
+                    id="confirmarAgendamento"
+                    class="confirm-booking"
+                >
+
+                    <span>
+                        Confirmar agendamento
+                    </span>
+
+                    <strong>
+                        ↗
+                    </strong>
+
+                </button>
 
             </div>
 
 
-            <div id="linha"></div>
+            <p
+                id="mensagemAgendamento"
+                class="booking-message"
+            ></p>
 
-        </div>
+        </section>
 
     </main>
 
 
+    <!-- ======================================== -->
+    <!-- FOOTER -->
+    <!-- ======================================== -->
 
-    <!-- ================= FOOTER ================= -->
+    <footer>
 
-    <footer id="rodape">
-
-        <div class="rodape-logo">
-
-            <h2>NEXA</h2>
-
-            <p>
-                Informação também é cuidado.
-            </p>
-
+        <div
+            class="footer-logo"
+            id="footerLogo"
+        >
+            BARBEARIA
         </div>
 
+        <div class="footer-bottom">
 
-        <div class="rodape-links">
-
-            <a href="saude.html">
-                Saúde da Mulher
-            </a>
-
-            <a href="ist.html">
-                ISTs
-            </a>
-
-            <a href="anticoncepcionais.html">
-                Anticoncepcionais
-            </a>
-
-            <a href="prevencao.html">
-                Prevenção
-            </a>
-
-            <a href="informacao.html">
-                Informação
-            </a>
-
-            <a href="orientacao.html">
-                Orientação
-            </a>
-
-            <a href="nexa-ai.html">
-                NEXA IA
-            </a>
-
-        </div>
+            <span></span>
 
 
-        <div class="rodape-social">
+            <span>
 
-            <a href="https://www.instagram.com/202_farmacia/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram do NEXA">
+                <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    id="instagramLink"
+                >
+                    Instagram
+                </a>
 
-                <i class="fa-brands fa-instagram"></i>
+                ↗
 
-            </a>
-
-        </div>
+            </span>
 
 
-        <div class="rodape-copy">
+            <span>
 
-            <p>
-                © 2026 NEXA — Projeto educativo sobre saúde
-            </p>
+                <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    id="whatsappLink"
+                >
+                    WhatsApp
+                </a>
+
+                ↗
+
+            </span>
 
         </div>
 
     </footer>
 
 
+    <!-- ======================================== -->
+    <!-- SCRIPTS -->
+    <!-- ======================================== -->
+
     <script src="script.js"></script>
+
+    <script
+        type="module"
+        src="agendamento.js"
+    ></script>
+
+    <script
+        type="module"
+        src="config-site.js"
+    ></script>
 
 </body>
 

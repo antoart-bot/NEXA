@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login — Dom Alfa</title>
+
+    <style>
+
+        /* =====================================================
+           RESET
+           ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* =====================================================
+           BODY
+           ===================================================== */
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 25px;
+
+            font-family:
+                "DM Sans",
+                "Inter",
+                Arial,
+                sans-serif;
+
+            color: #f4f0e8;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(185, 138, 82, 0.14),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 0% 100%,
+                    rgba(185, 138, 82, 0.05),
+                    transparent 30%
+                ),
+
+                #090909;
+        }
+
+
+        /* =====================================================
+           CONTAINER
+           ===================================================== */
+
+        .login {
+
+            width: 100%;
+
+            max-width: 430px;
+
+            padding: 38px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #171717,
+                    #101010
+                );
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 25px 80px rgba(0, 0, 0, 0.45);
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* linha dourada superior */
+
+        .login::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            right: 0;
+
+            height: 3px;
+
+            background: #b98a52;
+        }
+
+
+        /* =====================================================
+           LOGO
+           ===================================================== */
+
+        .logo {
+
+            margin-bottom: 7px;
+
+            color: #f5f1e9;
+
+            font-size: 32px;
+
+            line-height: 1;
+
+            font-weight: 900;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        /* detalhe dourado */
+
+        .logo::after {
+
+            content: "";
+
+            display: block;
+
+            width: 32px;
+            height: 3px;
+
+            margin-top: 12px;
+
+            background: #b98a52;
+
+            border-radius: 3px;
+        }
+
+
+        /* =====================================================
+           SUBTÍTULO
+           ===================================================== */
+
+        .subtitulo {
+
+            margin: 18px 0 32px;
+
+            color: #77736d;
+
+            font-size: 14px;
+
+            font-weight: 500;
+        }
+
+
+        /* =====================================================
+           LABEL
+           ===================================================== */
+
+        label {
+
+            display: block;
+
+            margin-bottom: 20px;
+
+            color: #aaa59d;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.05em;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           INPUT
+           ===================================================== */
+
+        input {
+
+            width: 100%;
+
+            height: 54px;
+
+            margin-top: 9px;
+
+            padding: 0 16px;
+
+            border: 1px solid #303030;
+
+            border-radius: 8px;
+
+            background: #0c0c0c;
+
+            color: #f4f0e8;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            outline: none;
+
+            transition:
+                border-color 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        input::placeholder {
+
+            color: #55524e;
+        }
+
+
+        input:focus {
+
+            background: #111;
+
+            border-color: #b98a52;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(185, 138, 82, 0.09);
+        }
+
+
+        /* =====================================================
+           BOTÃO
+           ===================================================== */
+
+        button {
+
+            width: 100%;
+
+            height: 54px;
+
+            margin-top: 5px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #b98a52;
+
+            color: #111;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.02em;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        button:hover {
+
+            background: #d0a46b;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 28px
+                rgba(185, 138, 82, 0.15);
+        }
+
+
+        button:active {
+
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           MENSAGEM
+           ===================================================== */
+
+        #mensagem {
+
+            min-height: 20px;
+
+            margin: 17px 0 0;
+
+            color: #c48279;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            text-align: center;
+        }
+
+
+        /* =====================================================
+           CELULAR
+           ===================================================== */
+
+        @media (max-width: 500px) {
+
+            body {
+
+                padding: 15px;
+            }
+
+            .login {
+
+                padding: 30px 22px;
+
+                border-radius: 12px;
+            }
+
+            .logo {
+
+                font-size: 29px;
+            }
+
+            .subtitulo {
+
+                margin-bottom: 27px;
+            }
+
+        }
+
+
+        /* =====================================================
+           CELULAR PEQUENO
+           ===================================================== */
+
+        @media (max-width: 360px) {
+
+            .login {
+
+                padding: 27px 18px;
+            }
+
+            .logo {
+
+                font-size: 27px;
+            }
+
+            input,
+            button {
+
+                height: 51px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="login">
+
+
+        <div class="logo">
+            DOM ALFA
+        </div>
+
+
+        <div class="subtitulo">
+            Acesso do barbeiro
+        </div>
+
+
+        <form id="formLogin">
+
+
+            <label>
+
+                E-mail
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="seu@email.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </label>
+
+
+            <label>
+
+                Senha
+
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+
+            </label>
+
+
+            <button type="submit">
+                Entrar
+            </button>
+
+
+        </form>
+
+
+        <p id="mensagem"></p>
+
+
+    </main>
+
+
+    <script
+        type="module"
+        src="login.js"
+    ></script>
+
+
+</body>
+
+</html>
