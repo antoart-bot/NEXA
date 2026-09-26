@@ -1,152 +1,461 @@
-/* ================================
-   CURSOR PERSONALIZADO
-================================ */
+document.addEventListener("DOMContentLoaded", () => {
 
-const cursor = document.querySelector(".cursor");
-const cursorSmall = document.querySelector(".cursor-small");
+    console.log("NEXA: JavaScript carregado!");
 
-let mouseX = 0;
-let mouseY = 0;
+    /* =====================================================
+       CONFIGURAÇÃO
+       ===================================================== */
 
-let cursorX = 0;
-let cursorY = 0;
+    const cards = document.querySelectorAll(".card-home");
+
+    let favoritos = JSON.parse(
+        localStorage.getItem("nexaFavoritos")
+    ) || [];
+
+    let conquistas = JSON.parse(
+        localStorage.getItem("nexaConquistas")
+    ) || [];
 
 
-/* Movimento do mouse */
-document.addEventListener("mousemove", (e) => {
+    /* =====================================================
+       NOTIFICAÇÃO
+       ===================================================== */
 
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+    function notificacao(mensagem, tipo = "normal") {
 
-    /* Só executa se o elemento existir */
-    if (cursorSmall) {
-        cursorSmall.style.left = mouseX + "px";
-        cursorSmall.style.top = mouseY + "px";
+        const antiga = document.querySelector(".nexa-notificacao");
+
+        if (antiga) {
+            antiga.remove();
+        }
+
+        const caixa = document.createElement("div");
+
+        caixa.className = `nexa-notificacao ${tipo}`;
+
+        caixa.innerHTML = `
+            <span class="nexa-notificacao-icone">
+                ${tipo === "favorito" ? "♥" : "✓"}
+            </span>
+
+            <span class="nexa-notificacao-texto">
+                ${mensagem}
+            </span>
+        `;
+
+        document.body.appendChild(caixa);
+
+        setTimeout(() => {
+            caixa.classList.add("mostrar");
+        }, 50);
+
+        setTimeout(() => {
+
+            caixa.classList.remove("mostrar");
+
+            setTimeout(() => {
+                caixa.remove();
+            }, 400);
+
+        }, 3000);
     }
 
-});
 
+    /* =====================================================
+       CONQUISTAS
+       ===================================================== */
 
-/* Animação do cursor */
-function animateCursor() {
+    function conquistar(id, titulo, descricao) {
 
-    cursorX += (mouseX - cursorX) * 0.15;
-    cursorY += (mouseY - cursorY) * 0.15;
+        if (conquistas.includes(id)) {
+            return;
+        }
 
-    /* Só executa se o cursor existir */
-    if (cursor) {
-        cursor.style.left = cursorX + "px";
-        cursor.style.top = cursorY + "px";
+        conquistas.push(id);
+
+        localStorage.setItem(
+            "nexaConquistas",
+            JSON.stringify(conquistas)
+        );
+
+        const caixa = document.createElement("div");
+
+        caixa.className = "nexa-conquista";
+
+        caixa.innerHTML = `
+            <div class="nexa-conquista-icon">
+                🏆
+            </div>
+
+            <div class="nexa-conquista-info">
+
+                <small>CONQUISTA DESBLOQUEADA</small>
+
+                <strong>${titulo}</strong>
+
+                <p>${descricao}</p>
+
+            </div>
+        `;
+
+        document.body.appendChild(caixa);
+
+        setTimeout(() => {
+            caixa.classList.add("mostrar");
+        }, 80);
+
+        setTimeout(() => {
+
+            caixa.classList.remove("mostrar");
+
+            setTimeout(() => {
+                caixa.remove();
+            }, 500);
+
+        }, 5000);
     }
 
-    requestAnimationFrame(animateCursor);
-}
 
-animateCursor();
+    /* =====================================================
+       FAVORITOS
+       ===================================================== */
+
+    cards.forEach((card, index) => {
+
+        /*
+         * Cada card recebe um identificador baseado
+         * no link dele.
+         */
+
+        const link = card.querySelector("a");
+
+        const identificador =
+            link?.getAttribute("href") ||
+            `card-${index}`;
+
+        const botao = document.createElement("button");
+
+        botao.className = "nexa-favorito";
+
+        botao.setAttribute(
+            "aria-label",
+            "Adicionar aos favoritos"
+        );
+
+        const estaFavoritado =
+            favoritos.includes(identificador);
+
+        botao.innerHTML =
+            estaFavoritado ? "♥" : "♡";
+
+        if (estaFavoritado) {
+            botao.classList.add("ativo");
+        }
+
+        card.appendChild(botao);
 
 
-/* ================================
-   CURSOR INTERATIVO
-================================ */
+        botao.addEventListener("click", (evento) => {
 
-const links = document.querySelectorAll("a");
+            evento.preventDefault();
+            evento.stopPropagation();
 
-links.forEach(link => {
+            const posicao =
+                favoritos.indexOf(identificador);
 
-    link.addEventListener("mouseenter", () => {
 
-        if (!cursor) return;
+            /* REMOVER */
 
-        cursor.style.width = "55px";
-        cursor.style.height = "55px";
-        cursor.style.background = "rgba(214,255,63,.08)";
+            if (posicao !== -1) {
+
+                favoritos.splice(posicao, 1);
+
+                botao.innerHTML = "♡";
+
+                botao.classList.remove("ativo");
+
+                notificacao(
+                    "Conteúdo removido dos favoritos."
+                );
+
+            }
+
+            /* ADICIONAR */
+
+            else {
+
+                favoritos.push(identificador);
+
+                botao.innerHTML = "♥";
+
+                botao.classList.add("ativo");
+
+                notificacao(
+                    "Conteúdo salvo nos favoritos!",
+                    "favorito"
+                );
+
+                conquistar(
+                    "primeiro-favorito",
+                    "Primeiro favorito",
+                    "Você salvou seu primeiro conteúdo na NEXA."
+                );
+            }
+
+
+            localStorage.setItem(
+                "nexaFavoritos",
+                JSON.stringify(favoritos)
+            );
+
+        });
 
     });
 
 
-    link.addEventListener("mouseleave", () => {
+    /* =====================================================
+       INTERAÇÃO DOS CARDS
+       ===================================================== */
 
-        if (!cursor) return;
+    cards.forEach(card => {
 
-        cursor.style.width = "30px";
-        cursor.style.height = "30px";
-        cursor.style.background = "transparent";
+        card.addEventListener("mousemove", (evento) => {
+
+            if (window.innerWidth <= 700) {
+                return;
+            }
+
+            const rect =
+                card.getBoundingClientRect();
+
+            const x =
+                evento.clientX - rect.left;
+
+            const y =
+                evento.clientY - rect.top;
+
+            const centroX =
+                rect.width / 2;
+
+            const centroY =
+                rect.height / 2;
+
+            const rotacaoX =
+                ((y - centroY) / centroY) * -3;
+
+            const rotacaoY =
+                ((x - centroX) / centroX) * 3;
+
+            card.style.transform = `
+                perspective(900px)
+                rotateX(${rotacaoX}deg)
+                rotateY(${rotacaoY}deg)
+                translateY(-8px)
+            `;
+
+            card.style.setProperty(
+                "--mouse-x",
+                `${x}px`
+            );
+
+            card.style.setProperty(
+                "--mouse-y",
+                `${y}px`
+            );
+
+        });
+
+
+        card.addEventListener("mouseleave", () => {
+
+            card.style.transform = "";
+
+        });
 
     });
 
-});
+
+    /* =====================================================
+       ANIMAÇÃO DOS CARDS
+       ===================================================== */
+
+    const observador =
+        new IntersectionObserver(
+            (elementos) => {
+
+                elementos.forEach((elemento) => {
+
+                    if (elemento.isIntersecting) {
+
+                        elemento.target.classList.add(
+                            "nexa-visivel"
+                        );
+
+                        observador.unobserve(
+                            elemento.target
+                        );
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
 
 
-/* ================================
-   PARALLAX DA IMAGEM
-================================ */
+    cards.forEach((card, index) => {
 
-const heroImage = document.querySelector(".hero-image");
+        card.style.setProperty(
+            "--delay",
+            `${index * 100}ms`
+        );
 
-window.addEventListener("scroll", () => {
+        card.classList.add(
+            "nexa-animar"
+        );
 
-    /* Se não existir imagem, não faz nada */
-    if (!heroImage) return;
+        observador.observe(card);
 
-    const scroll = window.scrollY;
+    });
 
-    if (scroll < window.innerHeight) {
 
-        heroImage.style.transform =
-            `scale(1.05) translateY(${scroll * 0.12}px)`;
+    /* =====================================================
+       PRIMEIRA INTERAÇÃO
+       ===================================================== */
+
+    if (
+        !localStorage.getItem(
+            "nexaPrimeiraVisita"
+        )
+    ) {
+
+        setTimeout(() => {
+
+            notificacao(
+                "Bem-vinda à NEXA! Informação também é cuidado."
+            );
+
+            localStorage.setItem(
+                "nexaPrimeiraVisita",
+                "true"
+            );
+
+        }, 1000);
 
     }
 
-});
+
+    /* =====================================================
+       CONQUISTA: EXPLORADOR
+       ===================================================== */
+
+    cards.forEach(card => {
+
+        const link =
+            card.querySelector("a");
+
+        if (!link) return;
+
+        link.addEventListener("click", () => {
+
+            conquistar(
+                "explorador",
+                "Exploradora NEXA",
+                "Você começou a explorar os conteúdos da NEXA."
+            );
+
+        });
+
+    });
 
 
-/* ================================
-   REVELAÇÃO AO ROLAR
-================================ */
-
-const elements = document.querySelectorAll(
-    ".service, .intro-content, .about-content, .contact-content"
-);
 
 
-/* Só cria o Observer se houver elementos */
-if (elements.length > 0) {
 
-    const observer = new IntersectionObserver(
-        (entries) => {
+    /* =====================================================
+       VOCÊ SABIA?
+       ===================================================== */
 
-            entries.forEach(entry => {
+    const fatos = [
 
-                if (entry.isIntersecting) {
+        "A prevenção é uma das formas mais importantes de cuidar da saúde.",
 
-                    entry.target.style.opacity = "1";
+        "Buscar informações confiáveis ajuda a tomar decisões mais conscientes.",
 
-                    entry.target.style.transform =
-                        "translateY(0)";
+        "Cada pessoa possui necessidades diferentes de cuidado e orientação.",
+
+        "Conversar com profissionais de saúde pode ajudar a esclarecer dúvidas.",
+
+        "Cuidar da saúde envolve informação, prevenção e acompanhamento.",
+
+        "Conhecimento também faz parte do cuidado com a saúde."
+
+    ];
+
+
+    const areaFato =
+        document.querySelector(
+            "#nexa-voce-sabia"
+        );
+
+
+    if (areaFato) {
+
+        const texto =
+            areaFato.querySelector(
+                ".nexa-fato-texto"
+            );
+
+        const botao =
+            areaFato.querySelector(
+                ".nexa-outro-fato"
+            );
+
+
+        function novoFato() {
+
+            const numero =
+                Math.floor(
+                    Math.random() * fatos.length
+                );
+
+            texto.textContent =
+                fatos[numero];
+
+        }
+
+
+        novoFato();
+
+
+        if (botao) {
+
+            botao.addEventListener(
+                "click",
+                () => {
+
+                    novoFato();
+
+                    notificacao(
+                        "Novo fato carregado!"
+                    );
 
                 }
+            );
 
-            });
-
-        },
-        {
-            threshold: 0.15
         }
+
+    }
+
+
+    /* =====================================================
+       FINAL
+       ===================================================== */
+
+    console.log(
+        "NEXA: sistema carregado com sucesso."
     );
 
-
-    elements.forEach(element => {
-
-        element.style.opacity = "0";
-
-        element.style.transform =
-            "translateY(35px)";
-
-        element.style.transition =
-            "opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)";
-
-        observer.observe(element);
-
-    });
-
-}
+});
