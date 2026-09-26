@@ -26,13 +26,19 @@ function adicionarMensagem(texto, tipo) {
 
     balao.className = "balao";
 
+const conteudo = document.createElement("div");
 
-    const paragrafo = document.createElement("p");
+conteudo.className = "conteudo-resposta";
 
-    paragrafo.textContent = texto;
+conteudo.innerHTML = texto
+    .replace(/^### (.*)$/gm, "<h3>$1</h3>")
+    .replace(/^## (.*)$/gm, "<h3>$1</h3>")
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/^\* (.*)$/gm, "<li>$1</li>")
+    .replace(/\n\n/g, "<br><br>")
+    .replace(/\n/g, "<br>");
 
-
-    balao.appendChild(paragrafo);
+balao.appendChild(conteudo);
 
     mensagem.appendChild(avatar);
 
